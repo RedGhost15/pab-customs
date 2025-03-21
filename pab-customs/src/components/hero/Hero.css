@@ -3,7 +3,7 @@
     --color2: #f55854;
     --color3: #807f7f;
     --color4: #020202;
-    --color5: #ff0202;
+    --color5: #ffffffcb;
     --color6: #dfdfdf;
     --color7: linear-gradient(90deg, rgba(0, 0, 128, 1) 3%, rgba(165, 7, 45, 1) 42%, rgba(71, 11, 160, 1) 72%, rgba(154, 16, 208, 1) 95%);
 }
@@ -14,18 +14,26 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 50px;
-    background-image: url("/img/hero-bg.jpg");
+    background-image: url("/img/bg4.jpg");
     background-size: cover;
-    background-position: top;
-    max-height: 1400px;
+    background-position: center -90%;
     padding-top: 200px;
 }
-
+.textContainer {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 .titleText {
     font-size: 96px;
     color: var(--color6);
 }
 .subtitleText {
     color: var(--color6);
+}
+
+.heroCall {
+    text-decoration: none;
 }

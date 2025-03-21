@@ -18,7 +18,7 @@ const Navbar = () => {
                 {/* Logoo */}
 
                 <a href="" className="navbar-brand">
-                    {/* <img src="/logo/pab-logo.png" alt="Logo" width="120" /> */}
+                    {/* <img src="/logo/pab-logo.png" alt="Logo" width="50" /> */}
                     <ShinyText text="PAB CUSTOM" disabled={false} speed={3} className='custom-class' />
                 </a>
 

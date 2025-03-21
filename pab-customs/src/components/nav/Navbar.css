@@ -8,12 +8,14 @@
     --color2: #f55854;
     --color3: #807f7f;
     --color4: #020202;
-    --color5: #ff0202;
+    --color5: #ffffffcb;
     --color6: #ffffff;
     --color7: linear-gradient(90deg, rgba(0, 0, 128, 1) 3%, rgba(165, 7, 45, 1) 42%, rgba(71, 11, 160, 1) 72%, rgba(154, 16, 208, 1) 95%);
 }
 
 .navbar {
+    z-index: 100;
+    position: fixed;
     margin-top: 20px;
     display: flex;
     align-items: center;
