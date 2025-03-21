@@ -12,11 +12,12 @@
     font-weight: bold;
     letter-spacing: -0.02em;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+    color: #020202;
 }
 
 .scroller span {
     flex-shrink: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 @media (min-width: 768px) {

@@ -18,12 +18,15 @@
 .navbar {
     z-index: 100;
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent; /* Default transparent */
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5rem 0; /* Add padding to navbar */
+    box-sizing: border-box;
 }
 
 .navbar-nav {
@@ -32,6 +35,8 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .navContainer {
@@ -97,18 +102,45 @@
 /* Responsive Design */
 @media (max-width: 992px) {
     .navbar-nav {
-        margin-top: 1rem;
+        flex-direction: column; /* Stack navbar items vertically */
+        width: 100%;
+        justify-content: center;
+        gap: 20px; /* Reduced gap for mobile */
+        padding: 1rem 0;
     }
 
     .nav-link {
+        font-size: 1.2rem; /* Larger font size on mobile */
         margin: 0.5rem 0;
+    }
+
+    /* Navbar Toggler */
+    .navbar-toggler {
+        border: none;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+
+    .navbar-toggler-icon {
+        background-color: var(--color6);
+        border-radius: 5px; /* Make it visible */
     }
 }
 
-@media (max-width: 762px) {
+/* Small mobile screens */
+@media (max-width: 768px) {
     .navbar-nav {
-        margin-top: 1rem;
-        align-items: center;
-        justify-content: center;
+        padding: 0.5rem 0;
+        gap: 10px; /* Even smaller gap */
+    }
+
+    .nav-link {
+        font-size: 1.1rem; /* Smaller font size for very small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        gap: 15px; /* Adjust gap on very small screens */
     }
 }

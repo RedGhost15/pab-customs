@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Navbar.css';
 import ShinyText from '../../misc/shinyText/ShinyText';
-import AnimatedContent from '../../misc/animatedContent/AnimatedContent'
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -62,17 +61,6 @@ const Navbar = () => {
     return (
         
         <nav className={`navbar navbar-expand-lg fixed-top ${navbarScrolled ? 'navbar-scrolled' : ''}`}>
-            <AnimatedContent
-                distance={150}
-                direction="horizontal"
-                reverse={false}
-                config={{ tension: 80, friction: 20 }}
-                initialOpacity={0.2}
-                animateOpacity
-                scale={1.1}
-                threshold={0.2}
-            >
-
             <div className="navContainer container-fluid">
                             <a href="#" className="navbar-brand" onClick={(e) => {
                                 e.preventDefault();
@@ -112,8 +100,6 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-
-            </AnimatedContent>
         </nav>
     );
 };
