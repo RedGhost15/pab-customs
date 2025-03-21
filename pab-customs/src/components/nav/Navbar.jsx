@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Navbar.css';
 import ShinyText from '../../misc/shinyText/ShinyText';
-import AnimatedContent from '../../misc/animatedContent/AnimatedContent'
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -60,65 +59,48 @@ const Navbar = () => {
     };
 
     return (
-        
         <nav className={`navbar navbar-expand-lg fixed-top ${navbarScrolled ? 'navbar-scrolled' : ''}`}>
-            <AnimatedContent
-                distance={150}
-                direction="horizontal"
-                reverse={false}
-                config={{ tension: 80, friction: 20 }}
-                initialOpacity={0.2}
-                animateOpacity
-                scale={1.1}
-                threshold={0.2}
-            >
-
             <div className="navContainer container-fluid">
-                            <a href="#" className="navbar-brand" onClick={(e) => {
-                                e.preventDefault();
-                                scrollToTop();
-                            }}>
-                                <ShinyText text="PAB CUSTOM" disabled={false} speed={3} className='shinyText' />
-                            </a>
+                <a href="#" className="navbar-brand" onClick={(e) => {
+                    e.preventDefault();
+                    scrollToTop();
+                }}>
+                    <ShinyText text="PAB CUSTOM" disabled={false} speed={3} className='shinyText' />
+                </a>
 
-                            <button 
-                                className="navbar-toggler" 
-                                type="button" 
-                                data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav"
-                                aria-controls="navbarNav"
-                                aria-expanded="false"
-                                aria-label="Toggle navigation"
-                            >
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
+                <button 
+                    className="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                            <div className="collapse navbar-collapse" id="navbarNav">
-                                <ul className="navbar-nav">
-                                    {['home', 'detailing', 'tuning', 'about', 'contact'].map((section) => (
-                                        <li className="nav-item" key={section}>
-                                            <a 
-                                                href={`#${section}`} 
-                                                className={`nav-link ${activeLink === section ? 'active' : ''}`} 
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    scrollToSection(section);
-                                                }}
-                                            >
-                                                {section.charAt(0).toUpperCase() + section.slice(1)}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-
-            </AnimatedContent>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        {['home', 'detailing', 'tuning', 'about', 'contact'].map((section) => (
+                            <li className="nav-item" key={section}>
+                                <a 
+                                    href={`#${section}`} 
+                                    className={`nav-link ${activeLink === section ? 'active' : ''}`} 
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection(section);
+                                    }}
+                                >
+                                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </nav>
     );
 };
 
 export default Navbar;
-
-
-
