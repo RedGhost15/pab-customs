@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './Detailing.css'; // Optional for custom styling
+import './Detailing.css';
 
 const Detailing = () => {
     return (
