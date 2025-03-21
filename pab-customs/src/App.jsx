@@ -17,7 +17,7 @@ function App () {
     <Banner />
     {/* <Tuning id="tuning" />
     <About id="about" />
-    <Contact id="contact" /> */}
+    <Contact id="contact" />aa */}
     </>
   )
 }
