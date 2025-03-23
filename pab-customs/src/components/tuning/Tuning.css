@@ -10,7 +10,7 @@
 }
 
 #tuning {
-    background-color: #f8f9fa; /* Light background */
+    background-color: var(--color4) ;/* Light background */
     padding: 4rem 0;
 }
 
@@ -34,4 +34,7 @@
 
 .tuneTwo {
 padding-top: 20px;
+}
+.lead, h2{
+    color: var(--color6);
 }

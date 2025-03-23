@@ -1,0 +1,36 @@
+/* Stiluri Generale */
+:root {
+    --color1: #61605f;
+    --color2: #f55854;
+    --color3: #807f7f;
+    --color4: #020202;
+    --color5: #ffffffcb;
+    --color6: #ffffff;
+    --color7: linear-gradient(90deg, rgba(0, 0, 128, 1) 3%, rgba(165, 7, 45, 1) 42%, rgba(71, 11, 160, 1) 72%, rgba(154, 16, 208, 1) 95%);
+}
+#why-us, #about-us {
+    background-color: var(--color4); /* Fundal deschis */
+    padding: 4rem 0;
+}
+
+.why-us-card, .about-us-content {
+    background-color: #fff; /* Fundal alb */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+    transition: transform 0.3s ease;
+}
+
+.why-us-card:hover {
+    transform: translateY(-10px); /* Efect de ridicare la hover */
+}
+
+/* Imagini */
+.img-fluid {
+    border-radius: 10px; /* Colțuri rotunjite pentru imagini */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+}
+
+/* Font Awesome Icons */
+.fas {
+    color: #007bff; /* Culoare primară pentru iconițe */
+}

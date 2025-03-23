@@ -6,6 +6,8 @@ import Hero from './components/hero/Hero'
 import Detailing from './components/detailing/Detailing'
 import Banner from './components/banner/banner'
 import Tuning from './components/tuning/Tuning'
+import Despre from './components/despre/Despre'
+import Why from './components/why/Why'
 
 function App () {
 
@@ -17,8 +19,10 @@ function App () {
     <Detailing id="detailing"/>
     <Banner />
     <Tuning id="tuning" />
-    {/* <About id="about" />
-    <Contact id="contact" />aa */}
+    <Why/>
+    <Despre id="about"/>
+
+    {/* <Contact id="contact" /> */}
     </>
   )
 }
