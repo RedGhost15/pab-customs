@@ -5,6 +5,7 @@ import Navbar from './components/nav/Navbar'
 import Hero from './components/hero/Hero'
 import Detailing from './components/detailing/Detailing'
 import Banner from './components/banner/banner'
+import Tuning from './components/tuning/Tuning'
 
 function App () {
 
@@ -15,8 +16,8 @@ function App () {
     <Hero id="home"/>
     <Detailing id="detailing"/>
     <Banner />
-    {/* <Tuning id="tuning" />
-    <About id="about" />
+    <Tuning id="tuning" />
+    {/* <About id="about" />
     <Contact id="contact" />aa */}
     </>
   )
