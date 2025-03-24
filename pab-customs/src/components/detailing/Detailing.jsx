@@ -9,7 +9,7 @@ const Detailing = () => {
             <div className="container">
                 {/* Interior Detailing Section */}
                 <div className="text-center mb-5">
-                    <h2>Interior Detailing</h2>
+                    <h2 className="detailTitle">Interior Detailing</h2>
                     <p className="lead">
                     Revitalizează interiorul mașinii tale cu serviciile noastre premium de detailing.
                     De la curățare în profunzime la eliminarea mirosurilor, redăm luxul și confortul vehiculului tău.
@@ -252,7 +252,7 @@ const Detailing = () => {
 
                 {/* Exterior Detailing Section */}
                 <div className="text-center mb-5 mt-5">
-                    <h2>Exterior Detailing</h2>
+                    <h2 className="detailTitle">Exterior Detailing</h2>
                     <p className="lead">
                     Redă strălucirea originală a exteriorului mașinii tale cu serviciile noastre profesionale de detailing.
                     De la spălare la ceruire, ne asigurăm că mașina ta arată ca nouă.

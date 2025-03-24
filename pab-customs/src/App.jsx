@@ -8,6 +8,7 @@ import Banner from './components/banner/banner'
 import Tuning from './components/tuning/Tuning'
 import Despre from './components/despre/Despre'
 import Why from './components/why/Why'
+import AuroraBanner from './components/aurora/AuroraBanner'
 
 function App () {
 
@@ -18,6 +19,7 @@ function App () {
     <Hero id="home"/>
     <Detailing id="detailing"/>
     <Banner />
+    <AuroraBanner />
     <Tuning id="tuning" />
     <Why/>
     <Despre id="about"/>

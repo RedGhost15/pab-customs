@@ -5,11 +5,11 @@ import './Despre.css';
 
 const Despre = () => {
     return (
-        <section id="about-us" className="container-fluid py-5">
+        <section id="about" className="container-fluid py-5">
             <div className="container">
                 {/* Titlu și Subtitlu */}
                 <div className="text-center mb-5">
-                    <h2>Despre Noi</h2>
+                    <h2 className="despreTitle">Despre Noi</h2>
                     <p className="lead">
                         La PAB Custom, suntem pasionați să oferim excelență în fiecare detaliu. Descoperiți povestea noastră și ce ne motivează.
                     </p>
@@ -50,17 +50,17 @@ const Despre = () => {
                 {/* Membrii Echipei */}
                 <div className="row mt-4">
                     <div className="col-md-4 text-center mb-4">
-                        <img src="/about-us/team1.jpg" className="img-fluid rounded-circle mb-3" alt="Membru Echipă 1" />
+                        <img src="/staff/staff.jpg" className="staffPic img mb-3" alt="Membru Echipă 1" />
                         <h4>John Doe</h4>
                         <p>Specialist în Tuning</p>
                     </div>
                     <div className="col-md-4 text-center mb-4">
-                        <img src="/about-us/team2.jpg" className="img-fluid rounded-circle mb-3" alt="Membru Echipă 2" />
+                        <img src="/staff/staff.jpg" className="staffPic img mb-3" alt="Membru Echipă 2" />
                         <h4>Jane Smith</h4>
                         <p>Expert în Detailing</p>
                     </div>
                     <div className="col-md-4 text-center mb-4">
-                        <img src="/about-us/team3.jpg" className="img-fluid rounded-circle mb-3" alt="Membru Echipă 3" />
+                        <img src="/staff/staff.jpg" className="staffPic img mb-3" alt="Membru Echipă 3" />
                         <h4>Mike Johnson</h4>
                         <p>Inginer Mecanic</p>
                     </div>

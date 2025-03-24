@@ -9,7 +9,7 @@ const Tuning = () => {
             <div className="container">
                 {/* Tuning Title and Subtitle */}
                 <div className="text-center mb-5">
-                    <h2>Tuning</h2>
+                    <h2 className="tuningTitle">Tuning</h2>
                     <p className="lead">
                         Tuning, chiptuning, flashtuning, remapare — toți acești termeni duc spre un singur rezultat: optimizarea softului de management al motorului din ECU, în vederea obținerii unei creșteri de putere/cuplu cu până la 35% mai mare pentru motoarele turbo diesel, 30% pentru motoarele turbo benzină și 8% pentru motoarele aspirate diesel sau benzină. Această optimizare va îmbunătăți semnificativ accelerarea și cuplul mașinii. Consumul de combustibil se va reduce în condiții „normale” de condus.
                     </p>

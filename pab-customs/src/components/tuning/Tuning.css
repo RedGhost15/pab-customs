@@ -38,3 +38,6 @@ padding-top: 20px;
 .lead, h2{
     color: var(--color6);
 }
+.tuningTitle{
+    font-size: 3rem;
+}

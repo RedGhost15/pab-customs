@@ -13,12 +13,25 @@
     padding: 4rem 0;
 }
 
-.why-us-card, .about-us-content {
+.why-us-card {
     background-color: #fff; /* Fundal alb */
     border-radius: 10px; /* Colțuri rotunjite */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
     transition: transform 0.3s ease;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.card-content{
+    min-height: 310px;
+}
+.cardIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .why-us-card:hover {
     transform: translateY(-10px); /* Efect de ridicare la hover */
@@ -33,4 +46,8 @@
 /* Font Awesome Icons */
 .fas {
     color: #007bff; /* Culoare primară pentru iconițe */
+}
+
+.whyTitle{
+    font-size: 3rem;
 }
