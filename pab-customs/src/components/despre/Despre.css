@@ -1,19 +1,4 @@
 /* Stiluri Generale */
-:root {
-    --color1: #61605f;
-    --color2: #f55854;
-    --color3: #c5c5c5;
-    --color4: #020202;
-    --color5: #ffffffcb;
-    --color6: #ffffff;
-    --color7: #ccecff;
-}
-#why-us {
-    background-color: var(--color4); /* Fundal deschis */
-    padding: 4rem 0;
-}
-
-
 
 
 .despreTitle, .teamTitle{

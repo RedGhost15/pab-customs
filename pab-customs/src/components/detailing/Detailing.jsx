@@ -11,8 +11,8 @@ const Detailing = () => {
                 <div className="text-center mb-5">
                     <h2 className="detailTitle">Interior Detailing</h2>
                     <p className="lead">
-                    Revitalizează interiorul mașinii tale cu serviciile noastre premium de detailing.
-                    De la curățare în profunzime la eliminarea mirosurilor, redăm luxul și confortul vehiculului tău.
+                        Revitalizează interiorul mașinii tale cu serviciile noastre premium de detailing.
+                        De la curățare în profunzime la eliminarea mirosurilor, redăm luxul și confortul vehiculului tău.
                     </p>
                 </div>
 
@@ -42,26 +42,26 @@ const Detailing = () => {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                        <th>Servicu</th>
-                                        <th>Pret(Ron)</th>
+                                            <th>Servicu</th>
+                                            <th>Pret(Ron)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-                                            <ul>
-                                            <li>Suflare cu aer și aspirare praf din toate compartimentele</li>
-                                            <li>Curățare în profunzime a scaunelor, mochetei, covorașelor și portbagajului cu injecție-extracție</li>
-                                            <li>Degresare a elementelor din piele, textil, plastic și plafon</li>
-                                            <li>Curățare completă a geamurilor interior/exterior, display-urilor și ornamentelor</li>
-                                            <li>Curățare a zonelor interioare ale pragurilor ușilor și portbagajului</li>
-                                            <li>Hidratare a elementelor din piele</li>
-                                            <li>Tratament de revitalizare a pieselor din plastic</li>
-                                            <li>Ozonificare interior</li>
-                                            <li>Igienizare habitaclu cu ozon</li>
-                                            <li>Spălare exterior cu spumă activă, șampon pH neutru și uscare</li>
-                                            <li>Durata: 24 ore (include uscarea completă a tapițeriilor)</li>
-                                            </ul>
+                                                <ul>
+                                                    <li>Suflare cu aer și aspirare praf din toate compartimentele</li>
+                                                    <li>Curățare în profunzime a scaunelor, mochetei, covorașelor și portbagajului cu injecție-extracție</li>
+                                                    <li>Degresare a elementelor din piele, textil, plastic și plafon</li>
+                                                    <li>Curățare completă a geamurilor interior/exterior, display-urilor și ornamentelor</li>
+                                                    <li>Curățare a zonelor interioare ale pragurilor ușilor și portbagajului</li>
+                                                    <li>Hidratare a elementelor din piele</li>
+                                                    <li>Tratament de revitalizare a pieselor din plastic</li>
+                                                    <li>Ozonificare interior</li>
+                                                    <li>Igienizare habitaclu cu ozon</li>
+                                                    <li>Spălare exterior cu spumă activă, șampon pH neutru și uscare</li>
+                                                    <li>Durata: 24 ore (include uscarea completă a tapițeriilor)</li>
+                                                </ul>
                                             </td>
                                             <td>700 - 1.400</td>
                                         </tr>
@@ -95,8 +95,8 @@ const Detailing = () => {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                        <th>Servicu</th>
-                                        <th>Pret(Ron)</th>
+                                            <th>Servicu</th>
+                                            <th>Pret(Ron)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -254,8 +254,8 @@ const Detailing = () => {
                 <div className="text-center mb-5 mt-5">
                     <h2 className="detailTitle">Exterior Detailing</h2>
                     <p className="lead">
-                    Redă strălucirea originală a exteriorului mașinii tale cu serviciile noastre profesionale de detailing.
-                    De la spălare la ceruire, ne asigurăm că mașina ta arată ca nouă.
+                        Redă strălucirea originală a exteriorului mașinii tale cu serviciile noastre profesionale de detailing.
+                        De la spălare la ceruire, ne asigurăm că mașina ta arată ca nouă.
                     </p>
                 </div>
 
@@ -285,8 +285,8 @@ const Detailing = () => {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                        <th>Servicu</th>
-                                        <th>Pret(Ron)</th>
+                                            <th>Servicu</th>
+                                            <th>Pret(Ron)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -334,8 +334,8 @@ const Detailing = () => {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                        <th>Servicu</th>
-                                        <th>Pret(Ron)</th>
+                                            <th>Servicu</th>
+                                            <th>Pret(Ron)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -381,9 +381,9 @@ const Detailing = () => {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                        <th>Servicu</th>
-                                        <th>Detalii</th>
-                                        <th>Pret(Ron)</th>
+                                            <th>Servicu</th>
+                                            <th>Detalii</th>
+                                            <th>Pret(Ron)</th>
                                         </tr>
                                     </thead>
                                     <tbody>

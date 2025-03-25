@@ -42,7 +42,7 @@ const Despre = () => {
                     <div className="col-md-12 text-center">
                         <h3 className="teamTitle">Faceți Cunostiință cu Echipa Noastră</h3>
                         <p className="lead">
-                            În spatele fiecărui proiect mare stă o echipă de profesioniști dedicați. Cunoașteți oamenii care fac totul posibil.
+                            În spatele fiecărui proiect stă o echipă de profesioniști dedicați. Cunoașteți oamenii care fac totul posibil.
                         </p>
                     </div>
                 </div>

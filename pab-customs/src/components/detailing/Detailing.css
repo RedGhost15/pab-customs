@@ -1,35 +1,35 @@
 /* Detailing.css */
-:root {
-    --color1: #61605f;
-    --color2: #f55854;
-    --color3: #807f7f;
-    --color4: #020202;
-    --color5: #ffffffcb;
-    --color6: #ffffff;
-    --color7: linear-gradient(90deg, rgba(0, 0, 128, 1) 3%, rgba(165, 7, 45, 1) 42%, rgba(71, 11, 160, 1) 72%, rgba(154, 16, 208, 1) 95%);
-}
+
 
 #detailing {
-    background-color: var(--color4); /* Light background */
-    padding: 60px 0; /* Add more padding */
+    background-image: url(/img/carbon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Light background */
+    padding: 60px 0;
+    /* Add more padding */
     color: var(--color5);
-    padding-top: 200px;
 }
 
+
 .accordion-button {
-    font-weight: bold; /* Make accordion headers bold */
+    font-weight: bold;
+    /* Make accordion headers bold */
 }
 
 .table {
-    margin-bottom: 0; /* Remove extra margin below tables */
+    margin-bottom: 0;
+    /* Remove extra margin below tables */
 }
+
 .lead {
     columns: var(--color6);
 }
-.detailTitle{
+
+.detailTitle {
     font-size: 3rem;
-    padding-top: 100px;
 }
+
 /* Custom accordion styles */
 .accordion-button {
     background-color: #000 !important;
@@ -44,11 +44,11 @@
 
 .accordion-button:focus {
     box-shadow: none;
-    border-color: rgba(0,0,0,.125);
+    border-color: rgba(0, 0, 0, .125);
 }
 
 .accordion-item {
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
 }
 
 /* Table styles inside accordion */

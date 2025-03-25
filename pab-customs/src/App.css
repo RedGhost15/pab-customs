@@ -1,7 +1,20 @@
+:root {
+    --color1: #61605f;
+    --color2: #f55854;
+    --color3: #c5c5c5;
+    --color4: #020202;
+    --color5: #ffffffcb;
+    --color6: #ffffff;
+    --color7: #ccecff;
+    --color8: #686A6C;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Emblema+One&family=Finlandica:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=VT323&display=swap");
+
 * {
     font-family: "Courier Prime", monospace;
 }
+
 body {
     display: flex;
     overflow-x: hidden;
@@ -9,4 +22,3 @@ body {
     width: 100vw;
     height: 100vh;
 }
-

@@ -82,7 +82,7 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        {['home', 'detailing', 'tuning', 'about', 'contact'].map((section) => (
+                        {['detailing', 'tuning', 'about', 'contact'].map((section) => (
                             <li className="nav-item" key={section}>
                                 <a 
                                     href={`#${section}`} 

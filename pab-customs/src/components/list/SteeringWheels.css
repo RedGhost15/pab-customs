@@ -1,0 +1,84 @@
+/* SteeringWheels.css */
+
+#steering-wheels {
+    background-image: url(/img/carbon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    color: var(--color5);
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.brand-description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color6);
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn.active {
+    background-color: #333 !important;
+    color: var(--color5) !important;
+}
+
+.dropdown-btn:hover {
+    background-color: #222 !important;
+}
+
+
+.carousel-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.carousel {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.carousel img {
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Ensure more space between gallery and details */
+.carousel-container {
+    margin-bottom: 50px;
+}

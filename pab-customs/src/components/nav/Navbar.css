@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Emblema+One&family=Finlandica:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=VT323&display=swap");
 
-* {
-    font-family: "Courier Prime", monospace;
+:root {
+    --color4: #000000;
+    /* Black */
+    --color5: #007bff;
+    /* Blue */
+    --color6: #ffffff;
+    /* White */
 }
 
-:root {
-    --color1: #61605f;
-    --color2: #f55854;
-    --color3: #807f7f;
-    --color4: #020202;
-    --color5: #ffffffcb;
-    --color6: #ffffff;
-    --color7: linear-gradient(90deg, rgba(0, 0, 128, 1) 3%, rgba(165, 7, 45, 1) 42%, rgba(71, 11, 160, 1) 72%, rgba(154, 16, 208, 1) 95%);
+* {
+    font-family: "Courier Prime", monospace;
 }
 
 /* Default Navbar */
@@ -23,9 +22,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent; /* Default transparent */
+    background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
-    padding: 0.5rem 0; /* Add padding to navbar */
+    padding: 0.5rem 0;
     box-sizing: border-box;
 }
 
@@ -49,23 +48,22 @@
 
 /* Navbar Scrolled */
 .navbar-scrolled {
-    background-color: var(--color6) !important; /* White background */
+    background-color: var(--color6) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-scrolled .nav-link:hover {
+    color: var(--color5) !important;
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link {
     color: var(--color4) !important;
 }
 
-/* Text color when navbar is scrolled */
-.navbar-scrolled .navbar-brand,
-.navbar-scrolled .nav-link {
-    color: var(--color4) !important; /* Black text */
-}
-
-/* Nav Links */
+/* Nav Links - Updated to match footer style */
 .nav-link {
-    color: var(--color6) !important; /* White text initially */
+    color: var(--color6) !important;
     margin: 0 0.5rem;
     position: relative;
     text-decoration: none;
@@ -73,76 +71,76 @@
     transition: color 0.3s ease;
     line-height: 30px;
     font-weight: 500;
+    display: inline-block;
+    padding-bottom: 2px;
 }
 
-/* Hover Effect */
 .nav-link:hover {
     color: var(--color5) !important;
 }
 
-/* Underline Animation */
+/* Underline Animation - Updated to match footer style */
 .nav-link::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: 0;
     width: 100%;
     height: 2px;
     background-color: var(--color5);
     transform: scaleX(0);
+    transform-origin: right;
     transition: transform 0.3s ease;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
     transform: scaleX(1);
+    transform-origin: left;
 }
 
-/* When scrolled, change underline to black */
 .navbar-scrolled .nav-link::after {
-    background-color: var(--color4);
+    background-color: var(--color5);
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
     .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically */
+        flex-direction: column;
         width: 100%;
         justify-content: center;
-        gap: 20px; /* Reduced gap for mobile */
+        gap: 20px;
         padding: 1rem 0;
     }
 
     .nav-link {
-        font-size: 1.2rem; /* Larger font size on mobile */
+        font-size: 1.2rem;
         margin: 0.5rem 0;
     }
 
-    /* Navbar Toggler */
     .navbar-toggler {
         border: none;
         background-color: transparent;
     }
 
     .navbar-toggler-icon {
-        background-color: var(--color6); /* Make it visible */
+        background-color: var(--color6);
     }
 }
 
-/* Small mobile screens */
 @media (max-width: 768px) {
     .navbar-nav {
         padding: 0.5rem 0;
-        gap: 10px; /* Even smaller gap */
+        gap: 10px;
     }
 
     .nav-link {
-        font-size: 1.1rem; /* Smaller font size for very small screens */
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 576px) {
     .navbar-nav {
-        gap: 15px; /* Adjust gap on very small screens */
+        gap: 15px;
     }
 }

@@ -13,7 +13,7 @@ const Why = () => {
                     <p className="lead">
                         La PAB Custom, suntem dedicați să oferim calitate și servicii de neegalat. Iată de ce ne remarcăm.
                     </p>
-                    
+
                 </div>
 
                 {/* Conținut */}
@@ -29,7 +29,7 @@ const Why = () => {
                                 </p>
                             </div>
                             <div className="cardIcon">
-                                <img src="/icons/crown.png" alt="crown icon" width="130px"/>
+                                <img src="/icons/crown.png" alt="crown icon" width="130px" />
                             </div>
                         </div>
                     </div>
@@ -41,11 +41,11 @@ const Why = () => {
                                 <i className="fas fa-star fa-3x mb-3 text-primary"></i>
                                 <h4>Servicii Premium</h4>
                                 <p>
-                                Folosim doar produse premium și tehnologii de <u>top</u> pentru a oferi un finisaj impecabil, protecție de lungă durată și un aspect de showroom.
+                                    Folosim doar produse premium și tehnologii de <u>top</u> pentru a oferi un finisaj impecabil, protecție de lungă durată și un aspect de showroom.
                                 </p>
                             </div>
                             <div className="cardIcon">
-                                <img src="/icons/diamond-award.png" alt="crown icon" width="130px"/>
+                                <img src="/icons/diamond-award.png" alt="crown icon" width="130px" />
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ const Why = () => {
                                 </p>
                             </div>
                             <div className="cardIcon">
-                                <img src="/icons/certificate.png" alt="crown icon" width="130px"/>
+                                <img src="/icons/certificate.png" alt="crown icon" width="130px" />
                             </div>
                         </div>
                     </div>
