@@ -16,8 +16,9 @@
 
 
 
-.despreTitle{
+.despreTitle, .teamTitle{
     font-size: 3rem;
+    color: var(--color6);
 }
 .staffPic {
     border-radius: 50%;
@@ -26,4 +27,6 @@
     border: 3px solid #007bff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.white, .teamSection{
+    color: var(--color6);
+}
