@@ -11,6 +11,7 @@ import Why from './components/why/Why'
 import AuroraBanner from './components/aurora/AuroraBanner'
 import Footer from './components/footer/Footer'
 import SteeringWheels from './components/list/SteeringWheels'
+import Partners from './components/parteneri/Partners'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Banner />
       <AuroraBanner />
       <Tuning id="tuning" />
+      <Partners />
       <SteeringWheels />
       <Despre id="about" />
       <Why />
