@@ -17,14 +17,14 @@ const Hero = () => {
                 scale={1.1}
                 threshold={0.2}
             >
-            <div className="textContainer">
-            <h1 className="titleText">Luxury Car Detailing</h1>
-            <p className="subtitleText">
-            Experimentează prestigiul unei mașini detaliate profesional,
-            radiind eleganță și rafinament la fiecare pas.
-            </p>
-            <a href="#" className="heroCall">Contactați-ne!</a>
-            </div>
+                <div className="textContainer">
+                    <h1 className="titleText">Luxury Car Detailing</h1>
+                    <p className="subtitleText">
+                        Experimentează prestigiul unei mașini detaliate profesional,
+                        radiind eleganță și rafinament la fiecare pas.
+                    </p>
+                    <a href="tel:+1234567890" className="heroCall">Contactați-ne!</a>
+                </div>
 
             </AnimatedContent>
         </div>

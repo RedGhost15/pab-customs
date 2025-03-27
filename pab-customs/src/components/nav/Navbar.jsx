@@ -17,7 +17,7 @@ const Navbar = () => {
                 setNavbarScrolled(true);
             }
 
-            const sections = ['home', 'detailing', 'tuning', 'about', 'contact'];
+            const sections = ['detailing', 'tuning', 'volane', 'about', 'contact'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -31,7 +31,7 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        setActiveLink('home'); 
+        setActiveLink('home');
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -45,7 +45,7 @@ const Navbar = () => {
             const element = document.getElementById(id);
             if (element) {
                 window.scrollTo({
-                    top: element.offsetTop - 50, 
+                    top: element.offsetTop - 50,
                     behavior: 'smooth',
                 });
             }
@@ -54,7 +54,7 @@ const Navbar = () => {
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        setActiveLink('home'); 
+        setActiveLink('home');
         setNavbarScrolled(false); // Ensure navbar resets when scrolling to top
     };
 
@@ -68,9 +68,9 @@ const Navbar = () => {
                     <ShinyText text="PAB CUSTOM" disabled={false} speed={3} className='shinyText' />
                 </a>
 
-                <button 
-                    className="navbar-toggler" 
-                    type="button" 
+                <button
+                    className="navbar-toggler"
+                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav"
@@ -82,11 +82,11 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        {['detailing', 'tuning', 'about', 'contact'].map((section) => (
+                        {['detailing', 'tuning', 'volane', 'about', 'contact'].map((section) => (
                             <li className="nav-item" key={section}>
-                                <a 
-                                    href={`#${section}`} 
-                                    className={`nav-link ${activeLink === section ? 'active' : ''}`} 
+                                <a
+                                    href={`#${section}`}
+                                    className={`nav-link ${activeLink === section ? 'active' : ''}`}
                                     onClick={(e) => {
                                         e.preventDefault();
                                         scrollToSection(section);

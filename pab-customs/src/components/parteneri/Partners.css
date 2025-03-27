@@ -3,6 +3,10 @@
     padding: 3rem 0;
     background-color: #f8f9fa;
     overflow: hidden;
+    box-shadow: 0 0 5px #fff,
+        0 0 50px rgba(0, 204, 255, 0.8),
+        0 0 35px rgba(0, 119, 255, 0.6);
+    margin: 3rem 0;
 }
 
 .partners-container {
@@ -15,23 +19,16 @@
 .partners-track {
     display: flex;
     gap: 5rem;
-    overflow-x: auto;
+    overflow-x: hidden;
+    /* Changed from auto to hidden for seamless scroll */
     scroll-behavior: smooth;
-    cursor: grab;
+    cursor: auto;
     -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling on iOS */
     scrollbar-width: none;
-    /* Hide scrollbar Firefox */
 }
 
 .partners-track::-webkit-scrollbar {
     display: none;
-    /* Hide scrollbar Chrome/Safari */
-}
-
-.partners-track.grabbing {
-    cursor: grabbing;
-    scroll-behavior: auto;
 }
 
 .partner-item {
@@ -42,7 +39,6 @@
     width: 120px;
     height: 80px;
 }
-
 
 .partner-item img {
     max-width: 100%;

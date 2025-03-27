@@ -10,17 +10,24 @@ const Partners = () => {
 
     const trackRef = useRef(null);
     const animationRef = useRef(null);
-    const scrollSpeed = 10; // Pixels per frame
+    const scrollSpeed = 25; // Pixels per frame
+    const clonedBrands = [...brands, ...brands]; // Double the items for seamless loop
 
-    // Auto-scroll effect
     useEffect(() => {
         const track = trackRef.current;
         if (!track) return;
 
+        // Start with the first set of brands (not the cloned ones)
+        track.scrollLeft = 0;
+
         const animate = () => {
-            // Continuous loop logic
-            if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+            // When we reach the midpoint (original content), instantly reset
+            if (track.scrollLeft >= brands.length * 150) { // 150px is approximate item width
+                track.style.scrollBehavior = 'auto';
                 track.scrollLeft = 0;
+                setTimeout(() => {
+                    track.style.scrollBehavior = 'smooth';
+                }, 0);
             } else {
                 track.scrollLeft += scrollSpeed;
             }
@@ -29,13 +36,13 @@ const Partners = () => {
 
         animationRef.current = requestAnimationFrame(animate);
         return () => cancelAnimationFrame(animationRef.current);
-    }, []);
+    }, [brands.length]);
 
     return (
         <section className="partners-section">
             <div className="partners-container">
                 <div className="partners-track" ref={trackRef}>
-                    {[...brands, ...brands].map((brand, index) => (
+                    {clonedBrands.map((brand, index) => (
                         <div className="partner-item" key={`${brand.id}-${index}`}>
                             <img
                                 src={brand.src}

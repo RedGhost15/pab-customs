@@ -30,6 +30,7 @@ const Footer = () => {
                             <li><a href="/" className="footer-link" onClick={scrollToTop}>Top</a></li>
                             <li><a href="#detailing" className="footer-link">Detailing</a></li>
                             <li><a href="#tuning" className="footer-link">Tuning</a></li>
+                            <li><a href="#volane" className="footer-link">Volane</a></li>
                             <li><a href="#about" className="footer-link">About</a></li>
                         </ul>
                     </div>

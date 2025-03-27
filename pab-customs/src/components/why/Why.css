@@ -3,6 +3,7 @@
     background-image: url(/img/carbon.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
     /* padding: 4rem 0; */
 }
 

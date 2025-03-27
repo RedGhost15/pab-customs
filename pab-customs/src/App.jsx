@@ -22,12 +22,11 @@ function App() {
       <Hero id="home" />
       <Banner />
       <Detailing id="detailing" />
-
       <Banner />
       <AuroraBanner />
       <Tuning id="tuning" />
       <Partners />
-      <SteeringWheels />
+      <SteeringWheels id="volane" />
       <Despre id="about" />
       <Why />
 
