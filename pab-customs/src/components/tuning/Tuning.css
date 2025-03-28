@@ -1,9 +1,8 @@
 /* Custom Styles for Tuning Page */
 
 #tuning {
-    background-image: url(/img/carbon.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: rgba(2, 2, 2, 0.5);
+    backdrop-filter: blur(1px);
     padding: 4rem 0;
 }
 

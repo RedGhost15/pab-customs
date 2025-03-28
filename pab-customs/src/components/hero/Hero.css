@@ -7,7 +7,8 @@
     justify-content: flex-start;
     background-image: url("/img/bg2.jpg");
     background-size: cover;
-    background-position: center -90%;
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 200px;
 }
 
@@ -21,11 +22,20 @@
 
 .titleText {
     font-size: 96px;
-    color: var(--color6);
+    background: #A7CFDF;
+    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .subtitleText {
+    font-size: 30px;
     color: var(--color6);
+    background: #A7CFDF;
+    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .heroCall {

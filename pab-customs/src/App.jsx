@@ -12,6 +12,8 @@ import AuroraBanner from './components/aurora/AuroraBanner'
 import Footer from './components/footer/Footer'
 import SteeringWheels from './components/list/SteeringWheels'
 import Partners from './components/parteneri/Partners'
+import ContactUs from './components/contactUs/ContactUs'
+import LiquidChrome from './misc/LiquidChrome/LiquidChrome'
 
 function App() {
 
@@ -23,14 +25,13 @@ function App() {
       <Banner />
       <Detailing id="detailing" />
       <Banner />
-      <AuroraBanner />
+      {/* <AuroraBanner /> */}
       <Tuning id="tuning" />
       <Partners />
       <SteeringWheels id="volane" />
       <Despre id="about" />
       <Why />
-
-      {/* <Contact id="contact" /> */}
+      <ContactUs id="contact" />
       <Footer />
     </>
   )

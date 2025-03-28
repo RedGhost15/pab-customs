@@ -1,16 +1,16 @@
-    import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
-    import { useEffect, useRef } from "react";
+import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
+import { useEffect, useRef } from "react";
 
-    import './Aurora.css';
+import './Aurora.css';
 
-    const VERT = `#version 300 es
+const VERT = `#version 300 es
     in vec2 position;
     void main() {
     gl_Position = vec4(position, 0.0, 1.0);
     }
     `;
 
-    const FRAG = `#version 300 es
+const FRAG = `#version 300 es
     precision highp float;
 
     uniform float uTime;
@@ -111,11 +111,11 @@
     }
     `;
 
-    export default function Aurora(props) {
+export default function Aurora(props) {
     const {
-        colorStops = ["#0242fc", "#0242fc", "#0242fc"],
-        amplitude = 3.0,
-        blend = 1.0
+        colorStops = ["#7e1414", "#7e1414", "#7e1414"],
+        amplitude = 0.2,
+        blend = 0.5
     } = props;
     const propsRef = useRef(props);
     propsRef.current = props;
@@ -127,9 +127,9 @@
         if (!ctn) return;
 
         const renderer = new Renderer({
-        alpha: true,
-        premultipliedAlpha: true,
-        antialias: true
+            alpha: true,
+            premultipliedAlpha: true,
+            antialias: true
         });
         const gl = renderer.gl;
         gl.clearColor(0, 0, 0, 0);
@@ -140,36 +140,36 @@
         let program;
 
         function resize() {
-        if (!ctn) return;
-        const width = ctn.offsetWidth;
-        const height = ctn.offsetHeight;
-        renderer.setSize(width, height);
-        if (program) {
-            program.uniforms.uResolution.value = [width, height];
-        }
+            if (!ctn) return;
+            const width = ctn.offsetWidth;
+            const height = ctn.offsetHeight;
+            renderer.setSize(width, height);
+            if (program) {
+                program.uniforms.uResolution.value = [width, height];
+            }
         }
         window.addEventListener("resize", resize);
 
         const geometry = new Triangle(gl);
         if (geometry.attributes.uv) {
-        delete geometry.attributes.uv;
+            delete geometry.attributes.uv;
         }
 
         const colorStopsArray = colorStops.map((hex) => {
-        const c = new Color(hex);
-        return [c.r, c.g, c.b];
+            const c = new Color(hex);
+            return [c.r, c.g, c.b];
         });
 
         program = new Program(gl, {
-        vertex: VERT,
-        fragment: FRAG,
-        uniforms: {
-            uTime: { value: 0 },
-            uAmplitude: { value: amplitude },
-            uColorStops: { value: colorStopsArray },
-            uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
-            uBlend: { value: blend }
-        }
+            vertex: VERT,
+            fragment: FRAG,
+            uniforms: {
+                uTime: { value: 0 },
+                uAmplitude: { value: amplitude },
+                uColorStops: { value: colorStopsArray },
+                uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
+                uBlend: { value: blend }
+            }
         });
 
         const mesh = new Mesh(gl, { geometry, program });
@@ -177,32 +177,32 @@
 
         let animateId = 0;
         const update = (t) => {
-        animateId = requestAnimationFrame(update);
-        const { time = t * 0.01, speed = 1.0 } = propsRef.current;
-        program.uniforms.uTime.value = time * speed * 0.1;
-        program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
-        program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
-        const stops = propsRef.current.colorStops ?? colorStops;
-        program.uniforms.uColorStops.value = stops.map((hex) => {
-            const c = new Color(hex);
-            return [c.r, c.g, c.b];
-        });
-        renderer.render({ scene: mesh });
+            animateId = requestAnimationFrame(update);
+            const { time = t * 0.01, speed = 1.0 } = propsRef.current;
+            program.uniforms.uTime.value = time * speed * 0.1;
+            program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
+            program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
+            const stops = propsRef.current.colorStops ?? colorStops;
+            program.uniforms.uColorStops.value = stops.map((hex) => {
+                const c = new Color(hex);
+                return [c.r, c.g, c.b];
+            });
+            renderer.render({ scene: mesh });
         };
         animateId = requestAnimationFrame(update);
 
         resize();
 
         return () => {
-        cancelAnimationFrame(animateId);
-        window.removeEventListener("resize", resize);
-        if (ctn && gl.canvas.parentNode === ctn) {
-            ctn.removeChild(gl.canvas);
-        }
-        gl.getExtension("WEBGL_lose_context")?.loseContext();
+            cancelAnimationFrame(animateId);
+            window.removeEventListener("resize", resize);
+            if (ctn && gl.canvas.parentNode === ctn) {
+                ctn.removeChild(gl.canvas);
+            }
+            gl.getExtension("WEBGL_lose_context")?.loseContext();
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [amplitude]);
 
     return <div ref={ctnDom} className="aurora-container" />;
-    }
+}

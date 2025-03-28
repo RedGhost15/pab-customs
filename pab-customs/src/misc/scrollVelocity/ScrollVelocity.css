@@ -16,7 +16,10 @@
 
 .scroller span {
     flex-shrink: 0;
-    background-color: white;
+    background: #A7CFDF;
+    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 768px) {

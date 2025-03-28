@@ -1,17 +1,24 @@
 /* Stiluri Generale */
+#about {
+    background-color: rgba(2, 2, 2, 0.5);
+    backdrop-filter: blur(5px);
+}
 
-
-.despreTitle, .teamTitle{
+.despreTitle,
+.teamTitle {
     font-size: 3rem;
     color: var(--color6);
 }
+
 .staffPic {
     border-radius: 50%;
-    height: 200px; 
+    height: 200px;
     object-fit: cover;
     border: 3px solid #007bff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.white, .teamSection{
+
+.white,
+.teamSection {
     color: var(--color6);
 }

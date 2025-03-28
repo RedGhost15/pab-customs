@@ -18,7 +18,7 @@ const Hero = () => {
                 threshold={0.2}
             >
                 <div className="textContainer">
-                    <h1 className="titleText">Luxury Car Detailing</h1>
+                    <h1 className="titleText">Professional Car Detailing & Tuning</h1>
                     <p className="subtitleText">
                         Experimentează prestigiul unei mașini detaliate profesional,
                         radiind eleganță și rafinament la fiecare pas.

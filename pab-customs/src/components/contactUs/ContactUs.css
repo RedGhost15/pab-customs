@@ -1,0 +1,141 @@
+.contact-page {
+    background-color: rgba(2, 2, 2, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.contact-main-section {
+    padding: 4rem 0;
+}
+
+.contact-title {
+    font-size: 3rem;
+    color: var(--color6);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.contact-content-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: rgba(33, 33, 33, 0.7);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(2px);
+}
+
+.contact-form-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 1.5rem;
+}
+
+.contact-info-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color6);
+    font-weight: 500;
+    border-bottom: 1px solid var(--color8);
+    padding-bottom: 0.5rem;
+}
+
+.contact-info-card,
+.location-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color8);
+}
+
+.contact-info p,
+.location-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--color3);
+}
+
+.contact-info svg,
+.location-info svg {
+    color: var(--color6);
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--color8);
+    border-radius: 4px;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+    color: var(--color6);
+}
+
+.form-control:focus {
+    border-color: var(--color8);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control::placeholder {
+    color: var(--color1);
+}
+
+.btn-primary {
+    background-color: var(--color8);
+    border: none;
+    color: var(--color6);
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color1);
+    color: var(--color6);
+}
+
+.map-section {
+    padding: 3rem 0;
+
+}
+
+.map-container {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--color8);
+}
+
+.map-section h3 {
+    color: var(--color6);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--color8);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.2rem;
+    }
+
+    .contact-content-area {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .contact-form-section,
+    .contact-info-section {
+        padding: 1rem 0;
+    }
+}
