@@ -9,7 +9,7 @@ const Why = () => {
             <div className="container">
                 {/* Titlu și Subtitlu */}
                 <div className="text-center mb-5">
-                    <h2 className="whyTitle">De Ce Să Ne Alegeți Pe Noi?</h2>
+                    <h2 className="whyTitle">De ce să ne alegeți pe noi?</h2>
                     <p className="lead">
                         La PAB Custom, suntem dedicați să oferim calitate și servicii de neegalat. Iată de ce ne remarcăm.
                     </p>

@@ -19,9 +19,19 @@
     flex-wrap: wrap;
     gap: 2rem;
     background-color: rgba(33, 33, 33, 0.7);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 2rem;
     backdrop-filter: blur(2px);
+    box-shadow: 0 0 5px #fff,
+        0 0 50px rgba(0, 204, 255, 0.8),
+        0 0 35px rgba(0, 119, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-content-area:hover {
+    box-shadow: 0 0 5px #fff,
+        0 0 50px rgb(0, 204, 255),
+        0 0 35px rgb(0, 119, 255);
 }
 
 .contact-form-section {
@@ -71,7 +81,7 @@
 }
 
 .form-control {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255);
     border: 1px solid var(--color8);
     border-radius: 4px;
     padding: 12px;
@@ -82,7 +92,7 @@
 .form-control:focus {
     border-color: var(--color8);
     outline: none;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(228, 253, 255);
 }
 
 .form-control::placeholder {

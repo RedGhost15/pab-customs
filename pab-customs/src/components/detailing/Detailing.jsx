@@ -238,7 +238,7 @@ const Detailing = () => {
                 </div>
 
                 {/* Images for Interior Detailing */}
-                <div className="row mb-5">
+                <div className="imgDets row mb-5">
                     <div className="col-md-4">
                         <img src="/detailing-img/int1.jpg" className="img-fluid" alt="Interior 1" />
                     </div>

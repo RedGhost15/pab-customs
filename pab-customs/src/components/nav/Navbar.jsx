@@ -7,12 +7,17 @@ import ShinyText from '../../misc/shinyText/ShinyText';
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [navbarScrolled, setNavbarScrolled] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 992); // 992px is Bootstrap's lg breakpoint
 
     useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 992);
+        };
+
         const handleScroll = () => {
             if (window.scrollY < 50) {
                 setActiveLink('home');
-                setNavbarScrolled(false); // Reset navbar style when at the top
+                setNavbarScrolled(false);
             } else {
                 setNavbarScrolled(true);
             }
@@ -30,10 +35,12 @@ const Navbar = () => {
             }
         };
 
+        window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
         setActiveLink('home');
 
         return () => {
+            window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
@@ -50,12 +57,21 @@ const Navbar = () => {
                 });
             }
         }
+
+        // Close mobile menu after clicking a link
+        if (isMobile) {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarToggler && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // This will close the menu
+            }
+        }
     };
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setActiveLink('home');
-        setNavbarScrolled(false); // Ensure navbar resets when scrolling to top
+        setNavbarScrolled(false);
     };
 
     return (
@@ -81,7 +97,7 @@ const Navbar = () => {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className={`navbar-nav ${isMobile ? 'mobile-menu' : ''}`}>
                         {['detailing', 'tuning', 'volane', 'about', 'contact'].map((section) => (
                             <li className="nav-item" key={section}>
                                 <a

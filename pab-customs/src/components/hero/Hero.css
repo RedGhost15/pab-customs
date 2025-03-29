@@ -1,7 +1,6 @@
 .heroContainer {
     width: 100%;
     position: fixed;
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -26,7 +25,6 @@
     background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .subtitleText {
@@ -40,4 +38,107 @@
 
 .heroCall {
     text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .heroContainer {
+        background-image: url("/img/bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heroContainer .titleText {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+        text-align: center;
+        max-width: 80%;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) - Below 576px */
+
+
+/* Small Devices (Landscape Phones) - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .heroContainer {
+        background-image: url("/img/bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heroContainer .titleText {
+        font-size: 2rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+    }
+}
+
+/* Medium Devices (Tablets) - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .heroContainer {
+        background-image: url("/img/bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heroContainer .titleText {
+        font-size: 2rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+    }
+}
+
+/* Large Devices (Laptops) - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .heroContainer .titleText {
+        font-size: 2.5rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Large Devices (Desktops) - 1200px to 1399px */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .heroContainer .titleText {
+        font-size: 3rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1.3rem;
+    }
+}
+
+/* XXL Devices (Large Desktops) - 1400px to 1919px */
+@media (min-width: 1400px) and (max-width: 1919px) {
+    .heroContainer .titleText {
+        font-size: 3.5rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mega Screens (4K/Ultrawide) - 1920px and above */
+@media (min-width: 1920px) {
+    .heroContainer .titleText {
+        font-size: 4rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1.5rem;
+    }
 }
