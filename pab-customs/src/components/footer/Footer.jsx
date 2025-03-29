@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Footer.css";
+import ShinyText from "../../misc/shinyText/ShinyText";
 
 const Footer = () => {
     const scrollToTop = (e) => {
@@ -17,7 +18,7 @@ const Footer = () => {
                 <div className="row">
                     {/* Left Section */}
                     <div className="col-md-4">
-                        <h5 className="footer-title">Pab Customs</h5>
+                        <ShinyText text="PAB CUSTOM" disabled={false} speed={3} className='shinyText' />
                         <p className="footer-text">
                             Experimentează perfecțiunea în detaliere și performanță auto, unde eleganța și puterea se întâlnesc pentru a transforma fiecare drum într-o experiență de excepție.
                         </p>

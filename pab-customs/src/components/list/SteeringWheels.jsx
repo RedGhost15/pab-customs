@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './SteeringWheels.css';
 
 const brandLogos = {
-    BMW: "/logos/bmw-logo.png",
-    Audi: "/logos/audi-logo.png",
-    Porsche: "/logos/porsche-logo.png",
-    VW: "/logos/vw-logo.png"
+    BMW: "/partners/33.png",
+    Audi: "/partners/1.png",
+    Porsche: "/partners/13.png",
+    VW: "/partners/15.png"
 };
 
 const steeringWheelData = {

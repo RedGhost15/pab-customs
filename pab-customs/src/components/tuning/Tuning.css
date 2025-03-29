@@ -1,8 +1,8 @@
 /* Custom Styles for Tuning Page */
 
 #tuning {
-    background-color: rgba(2, 2, 2, 0.5);
-    backdrop-filter: blur(1px);
+    background-color: rgba(2, 2, 2, 0);
+    backdrop-filter: blur(2px);
     padding: 4rem 0;
 }
 

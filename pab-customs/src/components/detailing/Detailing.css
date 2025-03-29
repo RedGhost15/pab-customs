@@ -3,9 +3,7 @@
 
 #detailing {
     background-color: rgba(2, 2, 2, 0);
-    backdrop-filter: blur(5px);
-    padding: 60px 0;
-    color: var(--color5);
+    backdrop-filter: blur(2px);
 }
 
 
@@ -42,6 +40,10 @@
 .accordion-button:focus {
     box-shadow: none;
     border-color: rgba(0, 0, 0, .125);
+}
+
+.brand-logo {
+    width: 50px;
 }
 
 .accordion-item {

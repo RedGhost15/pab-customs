@@ -7,10 +7,10 @@
     --color6: #ffffff;
     --color7: #ccecff;
     --color8: #686A6C;
-    --neon-color: #00f3ff;
     --color9: #00f3ff;
     --text-color: #fff;
-    --accent-color: #00f3ff;
+    --grad: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    --hover: #A7CFDF;
     --color10: #007bff;
 }
 
@@ -24,7 +24,7 @@
 body {
     display: flex;
     background:
-        url(/img/carbon.jpg) center/cover no-repeat fixed,
+        url(/img/leather.png) center/cover no-repeat fixed,
         linear-gradient(rgba(2, 2, 2, 0.7), rgba(2, 2, 2, 0.7));
     overflow-x: hidden;
     flex-direction: column;

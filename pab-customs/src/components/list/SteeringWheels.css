@@ -1,7 +1,7 @@
 /* SteeringWheels.css */
 .steering-wheels-section {
-    background-color: rgba(2, 2, 2, 0.5);
-    backdrop-filter: blur(5px);
+    background-color: rgba(2, 2, 2, 0);
+    backdrop-filter: blur(2px);
     padding: 2rem;
 }
 
@@ -72,7 +72,7 @@
     background: var(--text-color);
     color: var(--color4);
     font-weight: 700;
-    box-shadow: 0 0 15px var(--color10);
+    box-shadow: 0 0 15px var(--grad);
 }
 
 /* Carousel Styles */
