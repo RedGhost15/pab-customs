@@ -1,47 +1,162 @@
+:root {
+    --color6: #ffffff;
+    --primary: #007bff;
+    --text-color: #333333;
+    --gradient: linear-gradient(90deg, #A7CFDF 0%, #23538A 100%);
+    --hover-shadow: 0 0 5px #fff,
+        0 0 50px rgba(0, 204, 255, 0.8),
+        0 0 35px rgba(0, 119, 255, 0.6);
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #why-us {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    width: 100%;
+}
+
+.container {
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.whyTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color6);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.lead {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--color6);
+    max-width: 800px;
+    margin: 0 auto clamp(2rem, 5vw, 3rem);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-md-4 {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 .why-us-card {
     background-color: var(--color6);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    min-height: 400px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease-in-out;
+    min-height: clamp(300px, 40vw, 400px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card-content {
-    min-height: 310px;
+.cardContent {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fas {
+    color: var(--primary);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.why-us-card h4 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--text-color);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1.2rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+.why-us-card p {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    opacity: 0.9;
+}
+
+.why-us-card p u {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary);
 }
 
 .cardIcon {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: clamp(0.5rem, 1.5vw, 1rem);
+    background: var(--gradient);
+    border-radius: 0 0 10px 10px;
 }
 
+.cardIcon img {
+    width: clamp(80px, 15vw, 130px);
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
 
 .why-us-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 5px #fff,
-        0 0 50px rgba(0, 204, 255, 0.8),
-        0 0 35px rgba(0, 119, 255, 0.6);
-
+    box-shadow: var(--hover-shadow);
 }
 
-/* Imagini */
-.img-fluid {
-    border-radius: 10px;
-    /* Colțuri rotunjite pentru imagini */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Umbră subtilă */
+/* Responsive Breakpoints */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .col-md-4 {
+        width: 50%;
+    }
 }
 
-.whyTitle {
-    font-size: 3rem;
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 33.3333%;
+        margin-bottom: 0;
+    }
+
+    .why-us-card {
+        min-height: clamp(350px, 35vw, 400px);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .why-us-card {
+        min-height: 400px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }

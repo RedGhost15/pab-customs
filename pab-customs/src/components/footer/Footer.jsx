@@ -12,12 +12,13 @@ const Footer = () => {
         });
     };
 
+
     return (
         <footer className="footer">
-            <div className="container">
-                <div className="row">
+            <div className="container ">
+                <div className="mainCol row">
                     {/* Left Section */}
-                    <div className="col-md-4">
+                    <div className="slogan col-md-4">
                         <ShinyText text="PAB CUSTOM" disabled={false} speed={3} className='shinyText' />
                         <p className="footer-text">
                             Experimentează perfecțiunea în detaliere și performanță auto, unde eleganța și puterea se întâlnesc pentru a transforma fiecare drum într-o experiență de excepție.
@@ -25,7 +26,7 @@ const Footer = () => {
                     </div>
 
                     {/* Center Section - Website Navigation */}
-                    <div className="col-md-2 offset-md-1">
+                    <div className="linkCol col-md-2 offset-md-1">
                         <h6 className="footer-subtitle">Website</h6>
                         <ul className="footer-list">
                             <li><a href="/" className="footer-link" onClick={scrollToTop}>Top</a></li>
@@ -37,7 +38,7 @@ const Footer = () => {
                     </div>
 
                     {/* Right Section - Contact */}
-                    <div className="col-md-2">
+                    <div className="linkCol col-md-2">
                         <h6 className="footer-subtitle">Contact</h6>
                         <ul className="footer-list">
                             <li><a href="mailto:info@pabcustoms.com" className="footer-link">Email us</a></li>
@@ -46,7 +47,7 @@ const Footer = () => {
                     </div>
 
                     {/* Social Media */}
-                    <div className="col-md-2">
+                    <div className="linkCol col-md-2">
                         <h6 className="footer-subtitle">Socials</h6>
                         <ul className="footer-list">
                             <li><a href="https://facebook.com" className="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>

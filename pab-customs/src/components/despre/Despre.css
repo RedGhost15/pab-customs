@@ -1,24 +1,155 @@
-/* Stiluri Generale */
+/* Despre.css */
+:root {
+    --color6: #ffffff;
+    --hover: #A7CFDF;
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(90deg, #A7CFDF 0%, #23538A 100%);
+}
+
 #about {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    width: 100%;
+}
+
+.container {
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.text-center {
+    text-align: center;
 }
 
 .despreTitle,
 .teamTitle {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--color6);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: var(--text-shadow);
+}
+
+.lead {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--color6);
+    max-width: 800px;
+    margin: 0 auto clamp(2rem, 5vw, 3rem);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-md-6,
+.col-md-4,
+.col-md-12 {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.white {
+    color: var(--color6);
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: rgba(10, 10, 10, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.white h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    color: var(--color6);
+    font-weight: 600;
+}
+
+.white p {
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    line-height: 1.7;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    opacity: 0.9;
+}
+
+.teamSection {
+    color: var(--color6);
+    margin-top: clamp(2rem, 4vw, 3rem);
 }
 
 .staffPic {
     border-radius: 50%;
-    height: 200px;
+    width: clamp(150px, 25vw, 200px);
+    height: clamp(150px, 25vw, 200px);
     object-fit: cover;
     border: 3px solid var(--hover);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
 }
 
-.white,
-.teamSection {
-    color: var(--color6);
+.staffPic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.5);
+}
+
+.teamSection h4 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin: clamp(0.5rem, 1vw, 0.8rem) 0;
+    font-weight: 600;
+}
+
+.teamSection p {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Responsive Breakpoints */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-4 {
+        width: 50%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 33.3333%;
+    }
+
+    .white {
+        min-height: clamp(300px, 35vw, 400px);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .white {
+        min-height: 350px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .white {
+        min-height: 380px;
+    }
 }

@@ -25,7 +25,6 @@
 
 .navContainer {
     width: 1150px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,8 +232,18 @@
         gap: 40px;
     }
 
+    .navContainer {
+        margin: 0px 100px;
+    }
+
     .nav-link {
         font-size: 1.25rem;
+    }
+
+    .slogan {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
     }
 }
 
@@ -242,5 +251,9 @@
     .navbar-nav {
         width: 1150px;
         gap: 50px;
+    }
+
+    .navContainer {
+        margin: 0px 150px;
     }
 }
