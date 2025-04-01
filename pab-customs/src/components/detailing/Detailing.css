@@ -1,11 +1,9 @@
 /* Detailing.css */
 
-
 #detailing {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
 }
-
 
 .accordion-button {
     font-weight: bold;
@@ -71,4 +69,154 @@
 .accordion-body table th,
 .accordion-body table td {
     border-color: #444;
+}
+
+/* Mobile Cards (visible only on mobile) */
+.card-carousel {
+    display: none;
+    /* Hidden by default */
+}
+
+/* Accordions (visible only on desktop) */
+.accordion-desktop {
+    display: block;
+    /* Visible by default */
+}
+
+/* Touch-friendly carousel styling */
+.card-carousel-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-left: 16px;
+    /* Ensures the first card is fully visible */
+    scroll-padding-left: 16px;
+    /* Helps snap to the first card correctly */
+}
+
+
+
+/* Fix for first card getting cut off */
+.card-carousel .card:first-child {
+    margin-left: 0;
+}
+
+.card-carousel .card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Card styling */
+.card {
+    background-color: black;
+    color: var(--color6);
+    border: 1px solid var(--color6);
+    min-width: 250px;
+    /* Ensures proper width */
+}
+
+.card-title {
+    color: var(--color6);
+    font-weight: bold;
+}
+
+.cardCarousel h4 {
+    color: var(--color6);
+}
+
+.card-subtitle {
+    color: var() !important;
+}
+
+/* Media Queries */
+/* Mega Screens (4K/Ultrawide) - 1920px and above */
+@media (min-width: 1920px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* XXL Devices (Large Desktops) - 1400px to 1919px */
+@media (min-width: 1400px) and (max-width: 1919px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Extra Large Devices (Desktops) - 1200px to 1399px */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Large Devices (Laptops) - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Medium Devices (Tablets) - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Small Devices (Landscape Phones) - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .accordion-desktop {
+        display: none;
+    }
+
+    .cardCarousel {
+        display: block;
+    }
+
+    .imgRows {
+        display: none;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) - Below 576px */
+@media (max-width: 575.98px) {
+    .accordion-desktop {
+        display: none;
+    }
+
+    .cardCarousel {
+        display: block;
+    }
+
+    .imgRows {
+        display: none;
+    }
 }

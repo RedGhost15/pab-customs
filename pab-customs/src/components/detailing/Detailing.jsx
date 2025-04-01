@@ -17,7 +17,7 @@ const Detailing = () => {
                 </div>
 
                 {/* Dropdown Table for Interior Prices */}
-                <div className="accordion mb-5" id="interiorAccordion">
+                <div className="accordion accordion-desktop mb-5" id="interiorAccordion">
                     {/* Item 1 */}
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="interiorHeadingOne">
@@ -236,19 +236,129 @@ const Detailing = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Images for Interior Detailing */}
-                <div className="imgDets row mb-5">
-                    <div className="col-md-4">
-                        <img src="/detailing-img/int1.jpg" className="img-fluid" alt="Interior 1" />
-                    </div>
-                    <div className="col-md-4">
-                        <img src="/detailing-img/int2.jpg" className="img-fluid" alt="Interior 2" />
-                    </div>
-                    <div className="col-md-4">
-                        <img src="/detailing-img/int3.png" className="img-fluid" alt="Interior 3" />
+                {/* Scrollable Cards for Detailing Interior Complet */}
+                <div className=" cardCarousel container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-lg-10 col-xl-8">
+                            <h4 className="text-center mb-3">Detailing Interior Complet</h4>
+                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
+                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                                    <div className="card-body p-3">
+                                        <h6 className="card-subtitle mb-2 text-center">700 - 1.400 RON</h6>
+                                        <div className="card-text px-2">
+                                            <ul className="small ps-3">
+                                                <li>Suflare cu aer și aspirare praf din toate compartimentele</li>
+                                                <li>Curățare în profunzime a scaunelor, mochetei, covorașelor și portbagajului cu injecție-extracție</li>
+                                                <li>Degresare a elementelor din piele, textil, plastic și plafon</li>
+                                                <li>Curățare completă a geamurilor interior/exterior, display-urilor și ornamentelor</li>
+                                                <li>Curățare a zonelor interioare ale pragurilor ușilor și portbagajului</li>
+                                                <li>Hidratare a elementelor din piele</li>
+                                                <li>Tratament de revitalizare a pieselor din plastic</li>
+                                                <li>Ozonificare interior</li>
+                                                <li>Igienizare habitaclu cu ozon</li>
+                                                <li>Spălare exterior cu spumă activă, șampon pH neutru și uscare</li>
+                                                <li>Durata: 24 ore (include uscarea completă a tapițeriilor)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                {/* Scrollable Cards for Detailing Interior Rapid */}
+                <div className="cardCarousel container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-lg-10 col-xl-8">
+                            <h4 className="text-center mb-3">Detailing Interior Rapid (Quick)</h4>
+                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
+                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                                    <div className="card-body p-3">
+                                        <h6 className="card-subtitle mb-2 text-center">100 - 250 RON</h6>
+                                        <div className="card-text px-2">
+                                            <ul className="small ps-3">
+                                                <li>Suflare cu aer și aspirare praf din toate compartimentele</li>
+                                                <li>Curățare a scaunelor, covorașelor și portbagajului</li>
+                                                <li>Curățare a elementelor din piele, textil și plastic</li>
+                                                <li>Curățare completă a geamurilor interior/exterior, display-urilor și ornamentelor</li>
+                                                <li>Durata: 1 oră</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Scrollable Cards for Servicii Extra Interior */}
+                <div className="cardCarousel container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-lg-10 col-xl-8">
+                            <h4 className="text-center mb-3">Servicii Extra Interior</h4>
+                            <div className="d-flex justify-content-start overflow-auto pb-3" style={{
+                                scrollSnapType: "x mandatory",
+                                WebkitOverflowScrolling: "touch",
+                                scrollbarWidth: "none",
+                                msOverflowStyle: "none", // Hide scrollbar for IE/Edge
+                                gap: "16px", // Space between cards
+                                paddingLeft: "16px", // Ensure first card is fully visible
+                                scrollPaddingLeft: "16px", // Aligns the first item properly
+                            }}>
+                                {[
+                                    { title: "Protecție Leather Guard", price: "300 - 400 RON", details: ["Aplicarea a două straturi de Leather Guard", "Durabilitate: 3-12 luni", "Necesită Detailing Interior Complet", "Durata: 2 ore"] },
+                                    { title: "Protecție Ceramică Piele", price: "400 - 700 RON", details: ["Protecție ceramică semi-permanentă", "Proprietăți hidrofobe și anti-UV", "Necesită Detailing Interior Complet", "Durata: 4 ore"] },
+                                    { title: "Tratament Hidrofob Stofă", price: "300 - 400 RON", details: ["Impermeabilizare materiale textile", "Previne pătarea", "Necesită Detailing Interior Complet", "Durata: 3 ore + uscare"] },
+                                    { title: "Tratament Mixt", price: "300 - 700 RON", details: ["Tratament individual pentru fiecare suprafață", "Proprietăți hidrofobe", "Necesită Detailing Interior Complet", "Durata: 3 ore + uscare"] },
+                                    { title: "Tratament Covorașe", price: "100 RON", details: ["Impermeabilizare covorașe textile", "Necesită Detailing Interior", "Durata: 1 oră + uscare"] },
+                                    { title: "Protecție Plastice", price: "300 - 500 RON", details: ["Protecție împotriva UV și murdărie", "Necesită minim Quick Detail Interior", "Durata: 2 ore"] },
+                                    { title: "Ozonificare", price: "100 RON", details: ["Elimină mirosurile neplăcute", "Distruge bacteriile și virusurile"] },
+                                ].map((service, index) => (
+                                    <div key={index} className="card" style={{ width: "300px", scrollSnapAlign: "start", flexShrink: 1 }}>
+                                        <div className="card-body p-3">
+                                            <h5 className="card-title text-center">{service.title}</h5>
+                                            <h6 className="card-subtitle mb-2 text-center">{service.price}</h6>
+                                            <div className="card-text px-2">
+                                                <ul className="small ps-3">
+                                                    {service.details.map((detail, i) => (<li key={i}>{detail}</li>))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Images for Interior Detailing */}
+                <div className="imgRows container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-10 text-center">
+                            <div className="row g-3">
+                                <div className="col-md-4">
+                                    <img src="/detailing-img/int1.jpg" className="img-fluid rounded" alt="Interior 1" />
+                                </div>
+                                <div className="col-md-4">
+                                    <img src="/detailing-img/int2.jpg" className="img-fluid rounded" alt="Interior 2" />
+                                </div>
+                                <div className="col-md-4">
+                                    <img src="/detailing-img/int3.png" className="img-fluid rounded" alt="Interior 3" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
 
                 {/* Exterior Detailing Section */}
                 <div className="text-center mb-5 mt-5">
@@ -260,7 +370,7 @@ const Detailing = () => {
                 </div>
 
                 {/* Dropdown Table for Exterior Prices */}
-                <div className="accordion mb-5" id="exteriorAccordion">
+                <div className="accordion accordion-desktop mb-5" id="exteriorAccordion">
                     {/* Item 1 */}
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="exteriorHeadingOne">
@@ -507,16 +617,206 @@ const Detailing = () => {
                     </div>
                 </div>
 
+                {/* Scrollable Cards for Polish Integral 2 Pasi */}
+
+                <div className=" cardCarousel container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-lg-10 col-xl-8">
+                            <h4 className="text-center mb-3">Polish Integral 2 Pasi</h4>
+                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
+                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                                    <div className="card-body p-3">
+                                        <h6 className="card-subtitle mb-2 text-center">1.200 - 1.700 RON</h6>
+                                        <div className="card-text px-2">
+                                            <ul className="small ps-3">
+                                                <li>Cel mai bun tratament pentru mașina ta</li>
+                                                <li>Spălare cu spumă activă și șampon special</li>
+                                                <li>Curățare detaliată motor</li>
+                                                <li>Decontaminare chimică și mecanică</li>
+                                                <li>Corecție suprafețe vopsite (polish 2-3 pași)</li>
+                                                <li>Uscare prin suflare cu aer</li>
+                                                <li>Durata: 24 ore</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Scrollable Cards for Polish One-Step */}
+                <div className=" cardCarousel container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-lg-10 col-xl-8">
+                            <h4 className="text-center mb-3">Polish Integral One-Step</h4>
+                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
+                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                                    <div className="card-body p-3">
+                                        <h6 className="card-subtitle mb-2 text-center">800 - 1.300 RON</h6>
+                                        <div className="card-text px-2">
+                                            <ul className="small ps-3">
+                                                <li>Pentru mașini noi sau recent revopsite</li>
+                                                <li>Decontaminare chimică jante și anvelope</li>
+                                                <li>Curățare ornamente, sigle și grile</li>
+                                                <li>Polish One-Step cu protecție încorporată</li>
+                                                <li>Durata: 8 ore</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Scrollable Cards for Servicii Extra Exterior */}
+                <div className="cardCarousel container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-lg-10 col-xl-8">
+                            <h4 className="text-center mb-3">Servicii Extra Exterior</h4>
+                            <div className="d-flex justify-content-start overflow-auto pb-3" style={{
+                                scrollSnapType: "x mandatory",
+                                WebkitOverflowScrolling: "touch",
+                                scrollbarWidth: "none",
+                                msOverflowStyle: "none", // Hide scrollbar for IE/Edge
+                                gap: "16px", // Space between cards
+                                paddingLeft: "16px", // Ensure first card is fully visible
+                                scrollPaddingLeft: "16px", // Aligns the first item properly
+                            }}>
+                                {[
+                                    {
+                                        title: "Spălare Profesională",
+                                        price: "250 - 300 RON",
+                                        details: [
+                                            "Curățare de întreținere exterior",
+                                            "Spălare cu spumă activă",
+                                            "Decontaminare roți și caroserie",
+                                            "Uscare prin suflare",
+                                            "Durata: 2 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Polish per Element",
+                                        price: "100-150 RON",
+                                        details: [
+                                            "100 Lei pentru element mic",
+                                            "150 Lei pentru element mare"
+                                        ]
+                                    },
+                                    {
+                                        title: "Sealant Lichid",
+                                        price: "100 RON",
+                                        details: [
+                                            "Protecție sintetică hidrofobă",
+                                            "Proprietăți auto-curățare",
+                                            "Durata: 0.5 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Sealant Ceramic Spray",
+                                        price: "200 - 300 RON",
+                                        details: [
+                                            "Protecție spray pe bază de SiO₂",
+                                            "Durabilitate 3-6 luni",
+                                            "Durata: 1 oră"
+                                        ]
+                                    },
+                                    {
+                                        title: "Protecție Ceramică Ewocar",
+                                        price: "700 - 1.000 RON",
+                                        details: [
+                                            "Protecție 5 ani + Boost 12 luni",
+                                            "Strat nanoscopic și hidrofob",
+                                            "Durata: 24 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Protecție Gtechniq Crystal",
+                                        price: "600 - 900 RON",
+                                        details: [
+                                            "Protecție 3-5 ani",
+                                            "Luciu intens și rezistență la contaminanți",
+                                            "Durata: 24 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Coating Ceramic Gtechniq",
+                                        price: "500 - 800 RON",
+                                        details: [
+                                            "Coating hidrofob 1-2 ani",
+                                            "Poate fi aplicat peste alte protecții",
+                                            "Durata: 24 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Duble Straturi Coating",
+                                        price: "1.000 - 1.500 RON",
+                                        details: [
+                                            "Protecție ceramică rezistentă",
+                                            "Aplicată pe jante și etrieri",
+                                            "Durata: 24 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Tratament Geamuri Laterale",
+                                        price: "150 - 250 RON",
+                                        details: [
+                                            "Îmbunătățire vizibilitate și siguranță",
+                                            "Durata: 2 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Tratament Parbriz",
+                                        price: "150 - 200 RON",
+                                        details: [
+                                            "Protecție hidrofobă 12 luni",
+                                            "Durata: 2 ore"
+                                        ]
+                                    },
+                                    {
+                                        title: "Tratament Soft-top",
+                                        price: "250 - 300 RON",
+                                        details: [
+                                            "Protecție plafon textil",
+                                            "Durata: 1.5 ore + uscare"
+                                        ]
+                                    }
+                                ].map((service, index) => (
+                                    <div key={index} className="card" style={{ width: "300px", scrollSnapAlign: "start", flexShrink: 1 }}>
+                                        <div className="card-body p-3">
+                                            <h5 className="card-title text-center">{service.title}</h5>
+                                            <h6 className="card-subtitle mb-2 text-center">{service.price}</h6>
+                                            <div className="card-text px-2">
+                                                <ul className="small ps-3">
+                                                    {service.details.map((detail, i) => (<li key={i}>{detail}</li>))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 {/* Images for Exterior Detailing */}
-                <div className="row">
-                    <div className="col-md-4">
-                        <img src="/exterior/ext1.jpg" className="img-fluid" alt="Exterior 1" />
-                    </div>
-                    <div className="col-md-4">
-                        <img src="/exterior/ext2.jpg" className="img-fluid" alt="Exterior 2" />
-                    </div>
-                    <div className="col-md-4">
-                        <img src="/exterior/ext3.jpg" className="img-fluid" alt="Exterior 3" />
+                <div className="imgRows container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-10 text-center">
+                            <div className="row g-3">
+                                <div className="col-md-4">
+                                    <img src="/exterior/ext1.jpg" className="img-fluid" alt="Exterior 1" />
+                                </div>
+                                <div className="col-md-4">
+                                    <img src="/exterior/ext2.jpg" className="img-fluid" alt="Exterior 2" />
+                                </div>
+                                <div className="col-md-4">
+                                    <img src="/exterior/ext3.jpg" className="img-fluid" alt="Exterior 3" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

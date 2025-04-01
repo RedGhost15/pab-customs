@@ -1,4 +1,4 @@
-/* Custom Styles for Tuning Page */
+/* Tuning.css */
 
 #tuning {
     background-color: rgba(2, 2, 2, 0);
@@ -8,25 +8,15 @@
 
 .accordion-button {
     font-weight: bold;
-    background-color: #e9ecef;
-    /* Light gray background for accordion headers */
-}
-
-.accordion-body {
-    background-color: #fff;
-    /* White background for accordion content */
 }
 
 .table {
     margin-bottom: 0;
-    /* Remove default margin for tables */
 }
 
 .img-fluid {
     border-radius: 10px;
-    /* Rounded corners for images */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add shadow to images */
 }
 
 .tuneTwo {
@@ -40,4 +30,233 @@ h2 {
 
 .tuningTitle {
     font-size: 3rem;
+}
+
+/* Custom accordion styles */
+.accordion-button {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #000 !important;
+    color: #fff !important;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, .125);
+}
+
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+/* Table styles inside accordion */
+.accordion-body table {
+    color: #fff;
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.accordion-body table thead {
+    background-color: #333;
+}
+
+.accordion-body table tbody {
+    background-color: #222;
+}
+
+.accordion-body table th,
+.accordion-body table td {
+    border-color: #444;
+}
+
+/* Card Carousel Styles */
+.cardCarousel {
+    display: none;
+}
+
+.cardCarousel h4 {
+    color: var(--color6);
+}
+
+.card-carousel-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-left: 16px;
+    scroll-padding-left: 16px;
+    gap: 16px;
+}
+
+.card-carousel-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.card-carousel-container::-webkit-scrollbar-thumb {
+    background-color: var(--color6);
+    border-radius: 10px;
+}
+
+.card {
+    background-color: black;
+    color: var(--color6);
+    border: 1px solid var(--color6);
+    min-width: 260px;
+    max-width: 300px;
+    scroll-snap-align: start;
+}
+
+.card-title {
+    color: var(--color6);
+    font-weight: bold;
+}
+
+.card-subtitle {
+    color: var(--color6) !important;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card ul {
+    padding-left: 1rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Media Queries */
+/* For all desktop sizes - show accordion, hide carousel */
+@media (min-width: 768px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* For mobile sizes - hide accordion, show carousel */
+@media (max-width: 767.98px) {
+    .accordion-desktop {
+        display: none;
+    }
+
+    .cardCarousel {
+        display: block;
+    }
+
+    /* Optionally hide images on mobile if needed */
+    .imgRows {
+        display: none;
+    }
+}
+
+/* Mega Screens adjustments */
+@media (min-width: 1920px) {
+    .tuningTitle {
+        font-size: 3.5rem;
+    }
+
+    .accordion-button {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* Media Queries */
+/* Mega Screens (4K/Ultrawide) - 1920px and above */
+@media (min-width: 1920px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* XXL Devices (Large Desktops) - 1400px to 1919px */
+@media (min-width: 1400px) and (max-width: 1919px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Extra Large Devices (Desktops) - 1200px to 1399px */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Large Devices (Laptops) - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Medium Devices (Tablets) - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .accordion-desktop {
+        display: block;
+    }
+
+    .cardCarousel {
+        display: none;
+    }
+}
+
+/* Small Devices (Landscape Phones) - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .accordion-desktop {
+        display: none;
+    }
+
+    .cardCarousel {
+        display: block;
+    }
+
+    .imgRows {
+        display: none;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) - Below 576px */
+@media (max-width: 575.98px) {
+    .accordion-desktop {
+        display: none;
+    }
+
+    .cardCarousel {
+        display: block;
+    }
+
+    .imgRows {
+        display: none;
+    }
 }
