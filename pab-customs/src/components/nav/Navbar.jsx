@@ -77,7 +77,7 @@ const Navbar = () => {
     return (
         <nav className={`navbar navbar-expand-lg fixed-top ${navbarScrolled ? 'navbar-scrolled' : ''}`}>
             <div className="navContainer container-fluid">
-                <a href="#" className="navbar-brand" onClick={(e) => {
+                <a href="#" className="navbar-brand me-auto" onClick={(e) => {
                     e.preventDefault();
                     scrollToTop();
                 }}>
@@ -96,7 +96,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className={`navbar-nav ${isMobile ? 'mobile-menu' : ''}`}>
                         {['detailing', 'tuning', 'volane', 'about', 'contact'].map((section) => (
                             <li className="nav-item" key={section}>

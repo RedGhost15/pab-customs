@@ -236,6 +236,8 @@ const Detailing = () => {
                         </div>
                     </div>
                 </div>
+
+
                 {/* Scrollable Cards for Detailing Interior Complet */}
                 <div className=" cardCarousel container mt-4">
                     <div className="row justify-content-center">

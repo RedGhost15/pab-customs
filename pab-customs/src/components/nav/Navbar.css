@@ -6,7 +6,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
     padding: 0.5rem 0;
@@ -14,20 +13,19 @@
 }
 
 .navbar-nav {
-    width: 1150px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 50px;
     margin: 0;
     padding: 0;
 }
 
 .navContainer {
-    width: 1150px;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 2rem;
 }
 
 /* Nav Links */
@@ -98,7 +96,7 @@
     .navbar-toggler {
         border: none !important;
         padding: 0.5rem;
-        margin-right: 1rem;
+        margin-right: 0;
 
         /* Remove all focus/hover effects */
         &:focus,
@@ -127,9 +125,7 @@
 
     /* Mobile menu container */
     .navContainer {
-        margin: 0 1rem;
-        width: 100%;
-        justify-content: space-between;
+        padding: 0 1rem;
     }
 
     /* Mobile menu dropdown */
@@ -145,8 +141,6 @@
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     .nav-item {
@@ -180,7 +174,6 @@
             font-weight: 600;
         }
     }
-
 }
 
 /* Desktop Styles (≥992px) - keep scroll effects */
@@ -210,15 +203,18 @@
     }
 
     .navContainer {
-        margin: 0px 300px;
-        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0;
+        /* Prevent the navbar from taking up all available space */
     }
 }
 
 /* Responsive desktop adjustments */
 @media (min-width: 992px) and (max-width: 1200px) {
     .navbar-nav {
-        width: 100%;
         gap: 30px;
     }
 
@@ -232,28 +228,19 @@
         gap: 40px;
     }
 
-    .navContainer {
-        margin: 0px 100px;
-    }
-
     .nav-link {
         font-size: 1.25rem;
-    }
-
-    .slogan {
-        display: flex;
-        flex-direction: column;
-        align-self: flex-start;
     }
 }
 
 @media (min-width: 1401px) {
     .navbar-nav {
-        width: 1150px;
         gap: 50px;
     }
 
     .navContainer {
-        margin: 0px 150px;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 4rem;
     }
 }

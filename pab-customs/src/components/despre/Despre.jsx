@@ -16,7 +16,7 @@ const Despre = () => {
                 </div>
 
                 {/* Conținut */}
-                <div className="row">
+                <div className="cardsRow row">
                     <div className="white col-md-6">
                         <h3 className="">Povestea Noastră</h3>
                         <p>
