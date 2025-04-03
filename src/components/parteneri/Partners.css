@@ -53,10 +53,7 @@
         width: 100%;
     }
 
-    .partners-container {
-        padding: 0 10px;
-        max-width: 320px;
-    }
+
 
     .partners-track {
         gap: 1.5rem;
@@ -73,7 +70,7 @@
     .partners-section {
         padding: 2rem 0;
         margin: 2rem 0;
-        max-width: 576px;
+
     }
 
     .partners-track {
@@ -88,23 +85,11 @@
 
 /* Medium Devices (Tablets, 768px and up) */
 @media (min-width: 768px) {
-    .partners-section {
-        padding: 2.5rem 0;
-        margin: 2.5rem 0;
-    }
-
-    .partners-container {
-        max-width: 720px;
-    }
 
     .partners-track {
         gap: 3.5rem;
     }
 
-    .partner-item {
-        width: 100px;
-        height: 70px;
-    }
 }
 
 /* Large Devices (Desktops, 992px and up) */
@@ -114,9 +99,6 @@
         margin: 3rem 0;
     }
 
-    .partners-container {
-        max-width: 960px;
-    }
 
     .partners-track {
         gap: 4rem;

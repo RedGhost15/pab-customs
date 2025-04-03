@@ -239,7 +239,7 @@ const Detailing = () => {
 
 
                 {/* Scrollable Cards for Detailing Interior Complet */}
-                <div className=" cardCarousel container mt-4">
+                <div className=" cardCarouselSingle container mt-4">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-10 col-xl-8">
                             <h4 className="text-center mb-3">Detailing Interior Complet</h4>
@@ -270,7 +270,7 @@ const Detailing = () => {
                 </div>
 
                 {/* Scrollable Cards for Detailing Interior Rapid */}
-                <div className="cardCarousel container mt-4">
+                <div className="cardCarouselSingle container mt-4">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-10 col-xl-8">
                             <h4 className="text-center mb-3">Detailing Interior Rapid (Quick)</h4>
@@ -621,7 +621,7 @@ const Detailing = () => {
 
                 {/* Scrollable Cards for Polish Integral 2 Pasi */}
 
-                <div className=" cardCarousel container mt-4">
+                <div className=" cardCarouselSingle container mt-4">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-10 col-xl-8">
                             <h4 className="text-center mb-3">Polish Integral 2 Pasi</h4>
@@ -648,7 +648,7 @@ const Detailing = () => {
                 </div>
 
                 {/* Scrollable Cards for Polish One-Step */}
-                <div className=" cardCarousel container mt-4">
+                <div className=" cardCarouselSingle container mt-4">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-10 col-xl-8">
                             <h4 className="text-center mb-3">Polish Integral One-Step</h4>

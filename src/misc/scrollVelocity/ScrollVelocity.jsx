@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useLayoutEffect, useState, useEffect } from "react";
+import { useRef, useLayoutEffect, useState } from "react";
 import {
     motion,
     useScroll,
@@ -21,11 +21,8 @@ function useElementWidth(ref) {
             }
         }
         updateWidth();
-        const resizeObserver = new ResizeObserver(updateWidth);
-        if (ref.current) {
-            resizeObserver.observe(ref.current);
-        }
-        return () => resizeObserver.disconnect();
+        window.addEventListener("resize", updateWidth);
+        return () => window.removeEventListener("resize", updateWidth);
     }, [ref]);
 
     return width;
@@ -38,24 +35,13 @@ export const ScrollVelocity = ({
     className = "",
     damping = 50,
     stiffness = 400,
-    numCopies = 3, // Reduced for mobile
-    velocityMapping = { input: [0, 500], output: [0, 3] }, // Adjusted for mobile
+    numCopies = 6,
+    velocityMapping = { input: [0, 1000], output: [0, 5] },
     parallaxClassName = "parallax",
     scrollerClassName = "scroller",
     parallaxStyle,
     scrollerStyle,
 }) => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
     function VelocityText({
         children,
         baseVelocity = velocity,
@@ -75,13 +61,13 @@ export const ScrollVelocity = ({
         const { scrollY } = useScroll(scrollOptions);
         const scrollVelocity = useVelocity(scrollY);
         const smoothVelocity = useSpring(scrollVelocity, {
-            damping: isMobile ? (damping * 1.5) : damping,
-            stiffness: isMobile ? (stiffness * 0.8) : stiffness,
+            damping: damping ?? 50,
+            stiffness: stiffness ?? 400,
         });
         const velocityFactor = useTransform(
             smoothVelocity,
-            velocityMapping?.input || [0, isMobile ? 500 : 1000],
-            velocityMapping?.output || [0, isMobile ? 3 : 5],
+            velocityMapping?.input || [0, 1000],
+            velocityMapping?.output || [0, 5],
             { clamp: false }
         );
 
@@ -101,33 +87,20 @@ export const ScrollVelocity = ({
 
         const directionFactor = useRef(1);
         useAnimationFrame((t, delta) => {
-            if (isMobile && !document.hidden) {
-                let moveBy = directionFactor.current * baseVelocity * (delta / 1000) * 0.7;
+            let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-                if (velocityFactor.get() < 0) {
-                    directionFactor.current = -1;
-                } else if (velocityFactor.get() > 0) {
-                    directionFactor.current = 1;
-                }
-
-                moveBy += directionFactor.current * moveBy * velocityFactor.get();
-                baseX.set(baseX.get() + moveBy);
-            } else if (!isMobile) {
-                let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-                if (velocityFactor.get() < 0) {
-                    directionFactor.current = -1;
-                } else if (velocityFactor.get() > 0) {
-                    directionFactor.current = 1;
-                }
-
-                moveBy += directionFactor.current * moveBy * velocityFactor.get();
-                baseX.set(baseX.get() + moveBy);
+            if (velocityFactor.get() < 0) {
+                directionFactor.current = -1;
+            } else if (velocityFactor.get() > 0) {
+                directionFactor.current = 1;
             }
+
+            moveBy += directionFactor.current * moveBy * velocityFactor.get();
+            baseX.set(baseX.get() + moveBy);
         });
 
         const spans = [];
-        for (let i = 0; i < (isMobile ? Math.min(numCopies, 3) : numCopies); i++) {
+        for (let i = 0; i < numCopies; i++) {
             spans.push(
                 <span className={className} key={i} ref={i === 0 ? copyRef : null}>
                     {children}
@@ -136,14 +109,10 @@ export const ScrollVelocity = ({
         }
 
         return (
-            <div className={`${parallaxClassName} parallax-container`} style={parallaxStyle}>
+            <div className={parallaxClassName} style={parallaxStyle}>
                 <motion.div
                     className={scrollerClassName}
-                    style={{
-                        x,
-                        ...scrollerStyle,
-                        width: 'max-content' // Constrain width to content
-                    }}
+                    style={{ x, ...scrollerStyle }}
                 >
                     {spans}
                 </motion.div>
@@ -152,7 +121,7 @@ export const ScrollVelocity = ({
     }
 
     return (
-        <section className="scroll-velocity-container">
+        <section>
             {texts.map((text, index) => (
                 <VelocityText
                     key={index}

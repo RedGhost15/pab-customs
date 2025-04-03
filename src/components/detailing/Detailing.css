@@ -5,6 +5,12 @@
     backdrop-filter: blur(2px);
 }
 
+#detailing .container {
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding: 0 clamp(0rem, 0vw, 2rem);
+}
+
 .accordion-button {
     font-weight: bold;
     /* Make accordion headers bold */
@@ -77,6 +83,12 @@
     /* Hidden by default */
 }
 
+#detailing .cardCarouselSingle {
+    overflow: hidden;
+    padding: 0 clamp(0rem, 0vw, 0rem);
+    overflow: hidden;
+}
+
 /* Accordions (visible only on desktop) */
 .accordion-desktop {
     display: block;
@@ -127,7 +139,8 @@
     font-weight: bold;
 }
 
-.cardCarousel h4 {
+.cardCarousel h4,
+.cardCarouselSingle h4 {
     color: var(--color6);
 }
 
@@ -142,7 +155,8 @@
         display: block;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: none;
     }
 }
@@ -153,7 +167,8 @@
         display: block;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: none;
     }
 }
@@ -164,7 +179,8 @@
         display: block;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: none;
     }
 }
@@ -175,7 +191,8 @@
         display: block;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: none;
     }
 }
@@ -186,7 +203,8 @@
         display: block;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: none;
     }
 }
@@ -197,7 +215,8 @@
         display: none;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: block;
     }
 
@@ -212,7 +231,8 @@
         display: none;
     }
 
-    .cardCarousel {
+    .cardCarousel,
+    .cardCarouselSingle {
         display: block;
     }
 

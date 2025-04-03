@@ -6,6 +6,12 @@
     padding: 4rem 0;
 }
 
+#tuning .container {
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding: 0 clamp(0rem, 0vw, 2rem);
+}
+
 .accordion-button {
     font-weight: bold;
 }
