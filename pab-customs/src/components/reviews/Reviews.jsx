@@ -60,7 +60,7 @@ const Reviews = () => {
             <div className="testimonial-container">
                 <div className="row">
                     <div className="col-12">
-                        <h2 className="testTitle text-center mb-5">Ce Spun Clienții Noștri</h2>
+                        <h2 className="testTitle text-center">Ce Spun Clienții Noștri</h2>
                     </div>
                 </div>
                 <div className="row">
@@ -69,7 +69,7 @@ const Reviews = () => {
                             activeIndex={index}
                             onSelect={handleSelect}
                             indicators={false}
-                            interval={3000}
+                            interval={2000}
                             pause={'hover'}
                             controls={false}
                         >

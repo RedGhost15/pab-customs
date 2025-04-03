@@ -1,3 +1,4 @@
+/* Why Us Section - Optimized for All Screens */
 #why-us {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
@@ -35,27 +36,30 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.col-md-4 {
-    width: 100%;
-    padding: 0 15px;
-    margin-bottom: clamp(1.5rem, 3vw, 2rem);
-}
-
+/* Card Base Styles */
 .why-us-card {
     background-color: var(--color6);
     border-radius: 10px;
+    color: var(--color4);
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease-in-out;
-    min-height: clamp(300px, 40vw, 400px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    /* Full width on smallest screens */
+    max-width: 400px;
+    /* Maximum card width */
+    min-height: 300px;
+    /* Base minimum height */
 }
 
 .cardContent {
@@ -74,7 +78,7 @@
 
 .why-us-card h4 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    color: var(--text-color);
+    color: var(--color8);
     margin-bottom: clamp(0.8rem, 1.5vw, 1.2rem);
     font-weight: 600;
     text-align: center;
@@ -82,7 +86,7 @@
 
 .why-us-card p {
     font-size: clamp(0.9rem, 1.2vw, 1rem);
-    color: var(--text-color);
+    color: var(--color8);
     line-height: 1.6;
     text-align: center;
     margin-bottom: clamp(1rem, 2vw, 1.5rem);
@@ -116,36 +120,90 @@
 }
 
 /* Responsive Breakpoints */
+/* Extra small devices (portrait phones, below 576px) */
+@media (max-width: 575.98px) {
+    .why-us-card {
+        min-height: 280px;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .col-md-4 {
-        width: 50%;
+
+    #why-us .row .col-md-4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why-us-card {
+        width: clamp(1vw, 5rem);
+        min-height: 320px;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .col-md-4 {
-        width: 33.3333%;
-        margin-bottom: 0;
+
+    #why-us .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    #why-us .row .col-md-4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
     }
 
     .why-us-card {
-        min-height: clamp(350px, 35vw, 400px);
+        width: 500px;
+        min-height: 320px;
+        height: 380px;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .why-us-card {
-        min-height: 400px;
+        min-height: 380px;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
+    #why-us .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    #why-us .row .col-md-4 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why-us-card {
+        width: 300px;
+        min-height: 320px;
+        height: 500px;
+    }
+}
+
+/* XXL devices (4K screens, 1600px and up) */
+@media (min-width: 1600px) {
+    .why-us-card {
+        min-height: 420px;
     }
 }

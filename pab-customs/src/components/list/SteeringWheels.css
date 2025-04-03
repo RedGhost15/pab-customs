@@ -90,7 +90,6 @@
 
 /* Carousel Styles */
 .carousel-container {
-    max-width: min(1200px, 90vw);
     margin: 0 auto;
     text-align: center;
     background: rgba(10, 10, 10, 0.7);
@@ -396,6 +395,10 @@
         width: clamp(180px, 60vw, 220px);
         height: clamp(180px, 60vw, 220px);
     }
+
+    .brand-button {
+        padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.4rem, 1vw, 0.5rem);
+    }
 }
 
 /* Small (sm) - 576px to 767px */
@@ -406,6 +409,12 @@
 
     .side-slide {
         opacity: 0.6;
+    }
+
+    .center-slide .wheel-image {
+        width: clamp(100px, 30vw, 125px);
+        height: clamp(120px, 30vw, 125px);
+        border: 2px solid var(--color6);
     }
 }
 

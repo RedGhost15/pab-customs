@@ -1,4 +1,3 @@
-/* Simplified Despre.css with inline cards */
 :root {
     --color6: #ffffff;
     --hover: #A7CFDF;
@@ -6,6 +5,102 @@
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Hero Container Media Queries */
+@media (max-width: 576px) {
+    .heroContainer {
+        background-image: url("/img/bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heroContainer .titleText {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+        text-align: center;
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .heroContainer {
+        background-image: url("/img/bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heroContainer .titleText {
+        font-size: 2rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .heroContainer {
+        background-image: url("/img/bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .heroContainer .titleText {
+        font-size: 2rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .heroContainer .titleText {
+        font-size: 2.5rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .heroContainer .titleText {
+        font-size: 3rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1919px) {
+    .heroContainer .titleText {
+        font-size: 3.5rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .heroContainer .titleText {
+        font-size: 4rem;
+    }
+
+    .heroContainer .subtitleText {
+        font-size: 1.5rem;
+    }
+}
+
+/* About Section Styles */
 #about {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
@@ -42,25 +137,20 @@
     opacity: 0.9;
 }
 
-/* Cards row styling - key changes here */
+/* Cards row styling */
 .cardsRow {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* This creates equal spacing between cards */
     justify-content: center;
     margin-bottom: 30px;
 }
 
 .cardsRow .col-md-6 {
-    flex: 1 1 calc(50% - 20px);
-    /* Two cards per row with gap */
     min-width: 300px;
     min-height: 300px;
-    /* Minimum card width */
     padding: 10px;
     margin: 0;
-
 }
 
 .white {
@@ -135,11 +225,10 @@
     margin-bottom: 0;
 }
 
-/* Responsive Breakpoints */
+/* Responsive Breakpoints for About Section */
 @media (max-width: 768px) {
     .cardsRow .col-md-6 {
         flex: 1 1 100%;
-        /* Stack cards on mobile */
     }
 
     .despreTitle,
@@ -149,5 +238,32 @@
 
     .lead {
         font-size: 1.1rem;
+    }
+}
+
+/* Additional responsive adjustments for team section */
+@media (max-width: 991px) {
+    .teamSection .col-md-4 {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .teamSection .col-md-4 {
+        flex: 1 1 100%;
+    }
+
+    #about {
+        padding: 2rem 0;
+    }
+
+    .despreTitle,
+    .teamTitle {
+        font-size: 1.8rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
