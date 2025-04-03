@@ -93,13 +93,24 @@
     margin: 0 auto;
     text-align: center;
     background: rgba(10, 10, 10, 0.7);
-    padding: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(0.5rem, 1.5vw, 1rem);
+    /* Reduced padding for mobile */
     border-radius: 10px;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 5px #fff,
-        0 0 50px rgba(0, 204, 255, 0.8),
-        0 0 35px rgba(0, 119, 255, 0.6);
+    box-shadow:
+        0 0 5px #fff,
+        0 0 15px rgba(0, 204, 255, 0.5),
+        /* Reduced glow intensity */
+        0 0 10px rgba(0, 119, 255, 0.4);
+    /* Reduced glow intensity */
+    width: 95%;
+    /* Changed from max-width to width */
+    max-width: min(800px, 90vw);
+    box-sizing: border-box;
+    /* Ensures padding is included in width */
+    overflow: hidden;
+    /* Prevents content from breaking out */
 }
 
 .brand-name {
@@ -404,28 +415,60 @@
 /* Small (sm) - 576px to 767px */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .carousel-track {
-        gap: 30px;
+        .carousel-container {
+            width: 100%;
+            /* Full width on mobile */
+            border-radius: 0;
+            /* Remove rounded corners on small screens */
+            padding: 0.5rem;
+            /* Fixed small padding */
+            margin: 0;
+            /* Remove margin on mobile */
+            box-shadow: none;
+            /* Remove intense glow on mobile */
+            border-left: none;
+            border-right: none;
+        }
+
+        .carousel {
+            margin: 0.5rem auto;
+            /* Reduced margin */
+            max-width: 100%;
+            /* Full width */
+        }
+
+        .carousel-track {
+            gap: 10px;
+            /* Reduced gap between items */
+        }
+
+        .wheel-image {
+            width: 100px !important;
+            /* Fixed size for mobile */
+            height: 100px !important;
+        }
+
+        .center-slide .wheel-image {
+            width: 120px !important;
+            height: 120px !important;
+        }
+
+        .brand-description {
+            margin-bottom: 1rem;
+            /* Reduced margin */
+            font-size: 0.8rem;
+            /* Smaller text */
+        }
     }
 
-    .side-slide {
-        opacity: 0.6;
+    /* Medium (md) - 768px to 991px */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .carousel-track {
+            gap: 40px;
+        }
     }
 
-    .center-slide .wheel-image {
-        width: clamp(100px, 30vw, 125px);
-        height: clamp(120px, 30vw, 125px);
-        border: 2px solid var(--color6);
+    /* Large (lg) - 992px and above */
+    @media (min-width: 992px) {
+        /* No additional changes needed */
     }
-}
-
-/* Medium (md) - 768px to 991px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .carousel-track {
-        gap: 40px;
-    }
-}
-
-/* Large (lg) - 992px and above */
-@media (min-width: 992px) {
-    /* No additional changes needed */
-}

@@ -3,6 +3,18 @@
     overflow: hidden;
     backdrop-filter: blur(2px);
     background-color: rgba(2, 2, 2, 0);
+    padding: 1rem 0;
+    width: 100vw;
+    /* Full viewport width */
+    margin-left: calc(-50vw + 50%);
+    /* Center-align the full-width element */
+    left: 0;
+}
+
+.scroller-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .scroller {
@@ -10,10 +22,12 @@
     white-space: nowrap;
     text-align: center;
     font-family: sans-serif;
-    font-size: 1rem;
     font-weight: bold;
     letter-spacing: -0.02em;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+    will-change: transform;
+    width: max-content;
+    /* Only as wide as its content needs */
 }
 
 .scroller span {
@@ -22,11 +36,53 @@
     background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0 0.5rem;
+}
+
+/* Mobile-first base styles */
+.scroller {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .scroller {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 }
 
 @media (min-width: 768px) {
     .scroller {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .scroller {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .scroller {
         font-size: 5rem;
         line-height: 5rem;
+    }
+}
+
+/* Edge containment */
+@media (max-width: 768px) {
+    .parallax {
+        backdrop-filter: none;
+    }
+
+    .scroller {
+        transform: translateZ(0);
+        padding: 0 1rem;
+        /* Add padding to prevent edge touching */
     }
 }

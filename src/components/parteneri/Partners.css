@@ -47,13 +47,133 @@
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
+/* Extra Small Devices (Phones, 320px and up) */
+@media (min-width: 320px) {
+    .partners-section {
+        width: 100%;
+    }
+
+    .partners-container {
+        padding: 0 10px;
+        max-width: 320px;
+    }
+
+    .partners-track {
+        gap: 1.5rem;
+    }
+
+    .partner-item {
+        width: 80px;
+        height: 50px;
+    }
+}
+
+/* Small Devices (Landscape Phones, 576px and up) */
+@media (min-width: 576px) {
+    .partners-section {
+        padding: 2rem 0;
+        margin: 2rem 0;
+    }
+
+    .partners-track {
+        gap: 2.5rem;
+    }
+
+    .partner-item {
+        width: 90px;
+        height: 60px;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (min-width: 768px) {
+    .partners-section {
+        padding: 2.5rem 0;
+        margin: 2.5rem 0;
+    }
+
+    .partners-container {
+        max-width: 720px;
+    }
+
+    .partners-track {
+        gap: 3.5rem;
+    }
+
+    .partner-item {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) {
+    .partners-section {
+        padding: 3rem 0;
+        margin: 3rem 0;
+    }
+
+    .partners-container {
+        max-width: 960px;
+    }
+
+    .partners-track {
+        gap: 4rem;
+    }
+
+    .partner-item {
+        width: 110px;
+        height: 75px;
+    }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .partners-container {
+        max-width: 1140px;
+    }
+
+    .partners-track {
+        gap: 4.5rem;
+    }
+
+    .partner-item {
+        width: 120px;
+        height: 80px;
+    }
+}
+
+/* XXL Devices (1920px and up) */
+@media (min-width: 1920px) {
+    .partners-container {
+        max-width: 1800px;
+    }
+
+    .partners-track {
+        gap: 5rem;
+    }
+}
+
+/* Special Cases */
+@media (max-width: 320px) {
     .partners-track {
         gap: 1rem;
     }
 
     .partner-item {
-        width: 100px;
-        height: 60px;
+        width: 70px;
+        height: 45px;
+    }
+}
+
+/* Touch device adjustments */
+@media (hover: none) {
+    .partners-track {
+        scroll-behavior: auto;
+        gap: 2rem;
+    }
+
+    .partner-item img {
+        filter: grayscale(0%) opacity(1);
     }
 }
