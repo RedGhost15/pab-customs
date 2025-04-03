@@ -73,6 +73,7 @@
     .partners-section {
         padding: 2rem 0;
         margin: 2rem 0;
+        max-width: 576px;
     }
 
     .partners-track {
