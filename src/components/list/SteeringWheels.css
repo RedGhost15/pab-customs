@@ -408,7 +408,11 @@
     }
 
     .brand-button {
-        padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.4rem, 1vw, 0.5rem);
+        padding: clamp(-.06rem, 0vw, 0.5rem);
+    }
+
+    .brand-buttons {
+        padding: 0 clamp(1rem, 3vw, 2rem);
     }
 }
 
@@ -460,6 +464,7 @@
             /* Smaller text */
         }
     }
+
 
     /* Medium (md) - 768px to 991px */
     @media (min-width: 768px) and (max-width: 991.98px) {

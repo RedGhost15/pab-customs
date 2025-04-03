@@ -50,7 +50,7 @@
 /* Extra Small Devices (Phones, 320px and up) */
 @media (min-width: 320px) {
     .partners-section {
-        width: 100%;
+        width: 100vw;
     }
 
 
@@ -70,7 +70,6 @@
     .partners-section {
         padding: 2rem 0;
         margin: 2rem 0;
-
     }
 
     .partners-track {
@@ -86,9 +85,12 @@
 /* Medium Devices (Tablets, 768px and up) */
 @media (min-width: 768px) {
 
+
+
     .partners-track {
         gap: 3.5rem;
     }
+
 
 }
 
@@ -98,6 +100,7 @@
         padding: 3rem 0;
         margin: 3rem 0;
     }
+
 
 
     .partners-track {
