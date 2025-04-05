@@ -1,8 +1,25 @@
 /* Detailing.css */
+:root {
+    --color1: #444444;
+    --color2: #f55854;
+    --color3: #c5c5c5;
+    --color4: #000000;
+    --color5: #ffffffcb;
+    --color6: #ffffff;
+    --color7: #ccecff;
+    --color8: #686A6C;
+    --color9: #00f3ff;
+    --text-color: #fff;
+    --grad: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    --hover: #A7CFDF;
+    --color10: #007bff;
+}
 
+/* Base Styles */
 #detailing {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
+    color: var(--color6);
 }
 
 #detailing .container {
@@ -11,57 +28,50 @@
     padding: 0 clamp(0rem, 0vw, 2rem);
 }
 
-.accordion-button {
-    font-weight: bold;
-    /* Make accordion headers bold */
+#detailing .detailingInfoCard {
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding: 0 clamp(0rem, 0vw, 2rem);
 }
 
-.table {
-    margin-bottom: 0;
-    /* Remove extra margin below tables */
+/* Typography */
+.detailTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color6);
 }
 
 .lead {
-    columns: var(--color6);
+    color: var(--color6);
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-.detailTitle {
-    font-size: 3rem;
+/* Accordion Styles */
+.accordion-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--color4);
 }
 
-/* Custom accordion styles */
 .accordion-button {
-    background-color: #000 !important;
-    color: #fff !important;
+    font-weight: bold;
+    background-color: var(--color4) !important;
+    color: var(--color6) !important;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #000 !important;
-    color: #fff !important;
-    box-shadow: none;
-}
-
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: rgba(0, 0, 0, .125);
-}
-
-.brand-logo {
-    width: 50px;
-}
-
-.accordion-item {
-    border: 1px solid rgba(0, 0, 0, .125);
-}
-
-/* Table styles inside accordion */
-.accordion-body table {
-    color: #fff;
+    background-color: var(--color4) !important;
+    color: var(--color6) !important;
 }
 
 .accordion-body {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color4);
+    color: var(--color6);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+}
+
+/* Table Styles */
+.accordion-body table {
+    color: var(--color6);
 }
 
 .accordion-body table thead {
@@ -75,90 +85,85 @@
 .accordion-body table th,
 .accordion-body table td {
     border-color: #444;
+    padding: 0.75rem;
 }
 
-/* Mobile Cards (visible only on mobile) */
-.card-carousel {
-    display: none;
-    /* Hidden by default */
-}
-
-#detailing .cardCarouselSingle {
-    overflow: hidden;
-    padding: 0 clamp(0rem, 0vw, 0rem);
-    overflow: hidden;
-}
-
-/* Accordions (visible only on desktop) */
-.accordion-desktop {
-    display: block;
-    /* Visible by default */
-}
-
-/* Touch-friendly carousel styling */
-.card-carousel-container {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling on iOS */
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding-left: 16px;
-    /* Ensures the first card is fully visible */
-    scroll-padding-left: 16px;
-    /* Helps snap to the first card correctly */
-}
-
-
-
-/* Fix for first card getting cut off */
-.card-carousel .card:first-child {
-    margin-left: 0;
-}
-
-.card-carousel .card {
-    scroll-snap-align: start;
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Card styling */
+/* Card Styles (Mobile Only) */
 .card {
-    background-color: black;
+    background-color: var(--color4);
     color: var(--color6);
     border: 1px solid var(--color6);
+    border-radius: 8px;
     min-width: 250px;
-    /* Ensures proper width */
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .card-title {
-    color: var(--color6);
     font-weight: bold;
-}
-
-.cardCarousel h4,
-.cardCarouselSingle h4 {
-    color: var(--color6);
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
 }
 
 .card-subtitle {
-    color: var() !important;
+    color: var(--color6) !important;
 }
 
-/* Media Queries */
+/* Swiper Carousel Styles */
+.service-swiper,
+.exterior-swiper,
+.interior-swiper {
+    padding: 20px 0 40px;
+}
+
+.service-swiper .swiper-slide,
+.exterior-swiper .swiper-slide,
+.interior-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-swiper .card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.service-swiper .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styles (Visible on all screens) */
+.img-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Pagination Styles */
+.swiper-pagination-bullet {
+    background: var(--color8);
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color10);
+    opacity: 1;
+}
+
+/* Media Queries (Keeping original structure) */
 /* Mega Screens (4K/Ultrawide) - 1920px and above */
 @media (min-width: 1920px) {
     .accordion-desktop {
         display: block;
     }
 
-    .cardCarousel,
-    .cardCarouselSingle {
-        display: none;
-    }
+
+
 }
 
 /* XXL Devices (Large Desktops) - 1400px to 1919px */
@@ -171,6 +176,8 @@
     .cardCarouselSingle {
         display: none;
     }
+
+
 }
 
 /* Extra Large Devices (Desktops) - 1200px to 1399px */
@@ -179,8 +186,10 @@
         display: block;
     }
 
-    .cardCarousel,
-    .cardCarouselSingle {
+
+
+
+    .detailingInfoCard {
         display: none;
     }
 }
@@ -195,6 +204,11 @@
     .cardCarouselSingle {
         display: none;
     }
+
+
+    .detailingCard {
+        display: none;
+    }
 }
 
 /* Medium Devices (Tablets) - 768px to 991px */
@@ -207,6 +221,8 @@
     .cardCarouselSingle {
         display: none;
     }
+
+
 }
 
 /* Small Devices (Landscape Phones) - 576px to 767px */
@@ -220,9 +236,6 @@
         display: block;
     }
 
-    .imgRows {
-        display: none;
-    }
 }
 
 /* Extra Small Devices (Portrait Phones) - Below 576px */
@@ -236,7 +249,11 @@
         display: block;
     }
 
-    .imgRows {
-        display: none;
+    .service-swiper .card {
+        max-width: 100%;
+    }
+
+    .img-swiper .swiper-slide img {
+        max-height: 250px;
     }
 }
