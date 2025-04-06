@@ -61,6 +61,11 @@ body {
     .detailing-desktop {
         display: none;
     }
+
+    body {
+        background: rgb(0, 0, 51);
+        background: radial-gradient(circle, rgba(0, 0, 51, 1) 6%, rgba(0, 0, 0, 1) 95%);
+    }
 }
 
 /* Make the entire screen a loading screen */
