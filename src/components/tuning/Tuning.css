@@ -142,6 +142,7 @@ h2 {
 }
 
 /* Media Queries */
+
 /* For all desktop sizes - show accordion, hide carousel */
 @media (min-width: 768px) {
     .accordion-desktop {
@@ -180,7 +181,6 @@ h2 {
     }
 }
 
-
 /* Media Queries */
 /* Mega Screens (4K/Ultrawide) - 1920px and above */
 @media (min-width: 1920px) {
@@ -202,6 +202,10 @@ h2 {
     .cardCarousel {
         display: none;
     }
+
+    .tuningSwiper {
+        display: none;
+    }
 }
 
 /* Extra Large Devices (Desktops) - 1200px to 1399px */
@@ -211,6 +215,10 @@ h2 {
     }
 
     .cardCarousel {
+        display: none;
+    }
+
+    .tuningSwiper {
         display: none;
     }
 }
@@ -224,6 +232,10 @@ h2 {
     .cardCarousel {
         display: none;
     }
+
+    .tuningSwiper {
+        display: none;
+    }
 }
 
 /* Medium Devices (Tablets) - 768px to 991px */
@@ -233,6 +245,10 @@ h2 {
     }
 
     .cardCarousel {
+        display: none;
+    }
+
+    .tuningSwiper {
         display: none;
     }
 }
@@ -247,9 +263,6 @@ h2 {
         display: block;
     }
 
-    .imgRows {
-        display: none;
-    }
 }
 
 /* Extra Small Devices (Portrait Phones) - Below 576px */
@@ -262,7 +275,4 @@ h2 {
         display: block;
     }
 
-    .imgRows {
-        display: none;
-    }
 }

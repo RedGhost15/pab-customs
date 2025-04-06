@@ -1,4 +1,3 @@
-/* Detailing.css */
 :root {
     --color1: #444444;
     --color2: #f55854;
@@ -9,13 +8,13 @@
     --color7: #ccecff;
     --color8: #686A6C;
     --color9: #00f3ff;
+    --color10: #007bff;
     --text-color: #fff;
     --grad: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     --hover: #A7CFDF;
-    --color10: #007bff;
 }
 
-/* Base Styles */
+/* ====== Base Styling ====== */
 #detailing {
     background-color: rgba(2, 2, 2, 0);
     backdrop-filter: blur(2px);
@@ -23,131 +22,164 @@
 }
 
 #detailing .container {
-    max-width: min(1200px, 90vw);
+    max-width: min(1200px, 100vw);
     margin: 0 auto;
     padding: 0 clamp(0rem, 0vw, 2rem);
 }
 
-#detailing .detailingInfoCard {
-    max-width: min(1200px, 90vw);
-    margin: 0 auto;
-    padding: 0 clamp(0rem, 0vw, 2rem);
+.detailingInfoCard {
+    display: none;
 }
 
-/* Typography */
+/* ====== Typography ====== */
 .detailTitle {
     font-size: clamp(2rem, 5vw, 3rem);
     color: var(--color6);
+    margin-bottom: 1.5rem;
 }
 
 .lead {
     color: var(--color6);
     font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
 }
 
-/* Accordion Styles */
+/* ====== Accordion ====== */
 .accordion-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: var(--color4);
+    border: 1px solid var(--color6);
 }
 
-.accordion-button {
+.accordion-button,
+.accordion-button:not(.collapsed) {
     font-weight: bold;
     background-color: var(--color4) !important;
     color: var(--color6) !important;
     font-size: clamp(1rem, 2vw, 1.1rem);
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: var(--color4) !important;
-    color: var(--color6) !important;
+    padding: 1.25rem;
 }
 
 .accordion-body {
-    background-color: var(--color4);
+    background-color: var(--color6);
     color: var(--color6);
     font-size: clamp(0.9rem, 1.8vw, 1rem);
 }
 
-/* Table Styles */
 .accordion-body table {
     color: var(--color6);
 }
 
-.accordion-body table thead {
+.accordion-body thead {
     background-color: #333;
 }
 
-.accordion-body table tbody {
+.accordion-body tbody {
     background-color: #222;
 }
 
-.accordion-body table th,
-.accordion-body table td {
+.accordion-body th,
+.accordion-body td {
     border-color: #444;
     padding: 0.75rem;
 }
 
-/* Card Styles (Mobile Only) */
+/* ====== Cards ====== */
 .card {
     background-color: var(--color4);
     color: var(--color6);
     border: 1px solid var(--color6);
     border-radius: 8px;
-    min-width: 250px;
+    width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 300px;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.card-text {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
 }
 
 .card-title {
     font-weight: bold;
     font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    margin-bottom: 0.75rem;
 }
 
 .card-subtitle {
     color: var(--color6) !important;
+    margin-bottom: 1rem;
 }
 
-/* Swiper Carousel Styles */
-.service-swiper,
-.exterior-swiper,
-.interior-swiper {
-    padding: 20px 0 40px;
-}
-
-.service-swiper .swiper-slide,
-.exterior-swiper .swiper-slide,
-.interior-swiper .swiper-slide {
+.card-img-top {
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* ====== Swiper Carousel for Images ====== */
+.img-swiper .swiper-slide {
+    height: auto;
+    padding: 0 0.5rem;
+}
+
+.img-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ====== Swiper Cards Effect ====== */
+.service-swiper-cards {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0 2rem;
+}
+
+.service-swiper-cards .swiper-slide {
+    width: 300px;
+    height: auto;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.service-swiper .card {
+.service-swiper-cards .card {
+    background-color: var(--color4);
+    opacity: 1 !important;
     height: 100%;
-    transition: transform 0.3s ease;
 }
 
-.service-swiper .card:hover {
-    transform: translateY(-5px);
+/* ====== Swiper Pagination ====== */
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 1.5rem;
 }
 
-/* Image Styles (Visible on all screens) */
-.img-swiper .swiper-slide img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Pagination Styles */
 .swiper-pagination-bullet {
     background: var(--color8);
     opacity: 0.5;
     width: 10px;
     height: 10px;
+    margin: 0 6px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -155,105 +187,126 @@
     opacity: 1;
 }
 
-/* Media Queries (Keeping original structure) */
-/* Mega Screens (4K/Ultrawide) - 1920px and above */
-@media (min-width: 1920px) {
-    .accordion-desktop {
-        display: block;
-    }
-
-
-
+/* ====== Spacing Utilities ====== */
+.section-spacing {
+    margin: 2rem 0;
 }
 
-/* XXL Devices (Large Desktops) - 1400px to 1919px */
-@media (min-width: 1400px) and (max-width: 1919px) {
-    .accordion-desktop {
-        display: block;
-    }
+/* ====== Media Queries ====== */
 
-    .cardCarousel,
-    .cardCarouselSingle {
-        display: none;
-    }
+/* ≥992px (Desktop) - Show accordion and image carousel only */
+@media (min-width: 992px) {
 
-
-}
-
-/* Extra Large Devices (Desktops) - 1200px to 1399px */
-@media (min-width: 1200px) and (max-width: 1399px) {
-    .accordion-desktop {
-        display: block;
-    }
-
-
-
-
+    .service-swiper-cards,
     .detailingInfoCard {
-        display: none;
+        display: none !important;
+    }
+
+    .accordion-desktop {
+        display: block !important;
+    }
+
+    .img-swiper {
+        display: block !important;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem 0;
     }
 }
 
-/* Large Devices (Laptops) - 992px to 1199px */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* ≥768px (Tablet) - Show accordion and image carousel only */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .service-swiper-cards,
+    .service-swiper,
+    /* Add this to target the exterior services carousel */
+    .detailingInfoCard {
+        display: none !important;
+    }
+
+    /* Show desktop accordion */
     .accordion-desktop {
-        display: block;
+        display: block !important;
     }
 
-    .cardCarousel,
-    .cardCarouselSingle {
-        display: none;
+    /* Show image carousel */
+    .img-swiper {
+        display: block !important;
     }
 
-
-    .detailingCard {
-        display: none;
+    /* Grid layout for cards if needed */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem 0;
     }
 }
 
-/* Medium Devices (Tablets) - 768px to 991px */
-@media (min-width: 768px) and (max-width: 991px) {
-    .accordion-desktop {
-        display: block;
-    }
+/* <768px (Mobile only) - Show card carousels and image carousel */
+@media (max-width: 767.98px) {
 
-    .cardCarousel,
-    .cardCarouselSingle {
-        display: none;
-    }
-
-
-}
-
-/* Small Devices (Landscape Phones) - 576px to 767px */
-@media (min-width: 576px) and (max-width: 767px) {
+    /* Hide desktop accordion */
     .accordion-desktop {
         display: none;
     }
 
-    .cardCarousel,
-    .cardCarouselSingle {
+    /* Show mobile info cards */
+    .detailingInfoCard {
         display: block;
     }
 
-}
-
-/* Extra Small Devices (Portrait Phones) - Below 576px */
-@media (max-width: 575.98px) {
-    .accordion-desktop {
-        display: none;
+    /* Show card carousels */
+    .service-swiper-cards,
+    .service-swiper {
+        /* Add this to target the exterior services carousel */
+        display: block !important;
     }
 
-    .cardCarousel,
-    .cardCarouselSingle {
-        display: block;
+    /* Show image carousel */
+    .img-swiper {
+        display: block !important;
     }
 
-    .service-swiper .card {
-        max-width: 100%;
-    }
-
+    /* Adjust image height for mobile */
     .img-swiper .swiper-slide img {
         max-height: 250px;
+    }
+
+    /* Card spacing */
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Larger image scaling */
+@media (min-width: 992px) {
+    .img-swiper .swiper-slide img {
+        max-height: 400px;
+    }
+
+    .service-swiper-cards,
+    .service-swiper,
+    /* Add this to target the exterior services carousel */
+    .detailingInfoCard {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .img-swiper .swiper-slide img {
+        max-height: 450px;
+    }
+
+    .service-swiper-cards,
+    .service-swiper,
+    /* Add this to target the exterior services carousel */
+    .detailingInfoCard {
+        display: none !important;
     }
 }

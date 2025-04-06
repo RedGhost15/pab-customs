@@ -1,6 +1,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, EffectCards } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination'
 import './Tuning.css';
 
 const Tuning = () => {
@@ -225,142 +230,183 @@ const Tuning = () => {
                     </div>
                 </div>
 
-                {/* Chiptuning Benefits Section */}
-                <div className="cardCarousel container mt-4">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-lg-10 col-xl-8">
-                            <h4 className="text-center mb-3">Chiptuning Beneficii</h4>
-                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
-                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
-                                    <div className="card-body p-3">
-                                        <div className="card-text px-2">
-                                            <ul className="small ps-3">
-                                                <li>Creștere putere 10-35%</li>
-                                                <li>Îmbunătățire răspuns motor</li>
-                                                <li>Reducere consum combustibil (0.3-1L/100km)</li>
-                                                <li>Adaptare la stilul de condus</li>
-                                                <li>Compatibil cu toate sistemele mașinii</li>
-                                                <li>Durata: 1-8 ore</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                <Swiper
+                    effect={'cards'}
+                    grabCursor={true}
+                    modules={[EffectCards]}
+                    className="tuningSwiper"
+                >
+                    {/* Chiptuning Beneficii Section */}
+                    <SwiperSlide>
+                        <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                            <div className="card-body p-3">
+                                <h4 className="text-center mb-3">Chiptuning Beneficii</h4>
+                                <div className="card-text px-2">
+                                    <ul className="small ps-3">
+                                        <li>Creștere putere 10-35%</li>
+                                        <li>Îmbunătățire răspuns motor</li>
+                                        <li>Reducere consum combustibil (0.3-1L/100km)</li>
+                                        <li>Adaptare la stilul de condus</li>
+                                        <li>Compatibil cu toate sistemele mașinii</li>
+                                        <li>Durata: 1-8 ore</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
 
-                {/* What is Chiptuning Section */}
-                <div className="cardCarousel container mt-4">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-lg-10 col-xl-8">
-                            <h4 className="text-center mb-3">Ce este Chiptuning?</h4>
-                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
-                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
-                                    <div className="card-body p-3">
-                                        <div className="card-text px-2">
-                                            <ul className="small ps-3">
-                                                <li>Optimizare software ECU</li>
-                                                <li>Ajustare parametri motor</li>
-                                                <li>Compatibil mașini noi și vechi</li>
-                                                <li>Intervenție prin OBD2 sau metode speciale</li>
-                                                <li>Salvare configurație originală</li>
-                                                <li>Testare post-intervenție</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                    {/* What is Chiptuning Section */}
+                    <SwiperSlide>
+                        <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                            <div className="card-body p-3">
+                                <h4 className="text-center mb-3">Ce este Chiptuning?</h4>
+                                <div className="card-text px-2">
+                                    <ul className="small ps-3">
+                                        <li>Optimizare software ECU</li>
+                                        <li>Ajustare parametri motor</li>
+                                        <li>Compatibil mașini noi și vechi</li>
+                                        <li>Intervenție prin OBD2 sau metode speciale</li>
+                                        <li>Salvare configurație originală</li>
+                                        <li>Testare post-intervenție</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
 
-                {/* Cold Start Solution Section */}
-                <div className="cardCarousel container mt-4">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-lg-10 col-xl-8">
-                            <h4 className="text-center mb-3">Soluție Pornire la Cald</h4>
-                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
-                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
-                                    <div className="card-body p-3">
-                                        <div className="card-text px-2">
-                                            <ul className="small ps-3">
-                                                <li>Pentru motoare 1.9TDI și 2.0TDI</li>
-                                                <li>Remediere probleme pornire la cald</li>
-                                                <li>Ajustare software la uzura motor</li>
-                                                <li>Compatibil VW, Audi, Seat, Skoda</li>
-                                                <li>Funcționare garantată</li>
-                                                <li>Durata: 2-6 ore</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                    {/* Cold Start Solution Section */}
+                    <SwiperSlide>
+                        <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                            <div className="card-body p-3">
+                                <h4 className="text-center mb-3">Soluție Pornire la Cald</h4>
+                                <div className="card-text px-2">
+                                    <ul className="small ps-3">
+                                        <li>Pentru motoare 1.9TDI și 2.0TDI</li>
+                                        <li>Remediere probleme pornire la cald</li>
+                                        <li>Ajustare software la uzura motor</li>
+                                        <li>Compatibil VW, Audi, Seat, Skoda</li>
+                                        <li>Funcționare garantată</li>
+                                        <li>Durata: 2-6 ore</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
 
-                {/* FAQ Section */}
-                <div className="cardCarousel container mt-4">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-lg-10 col-xl-8">
-                            <h4 className="text-center mb-3">Întrebări Frecvente</h4>
-                            <div className="d-flex justify-content-center overflow-auto pb-3" style={{ scrollbarWidth: 'thin', gap: '16px' }}>
-                                <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
-                                    <div className="card-body p-3">
-                                        <h6 className="card-subtitle mb-2 text-center">Informații Generale</h6>
-                                        <div className="card-text px-2">
-                                            <ul className="small ps-3">
-                                                <li><strong>DPF/FAP:</strong> Rămâne funcțional</li>
-                                                <li><strong>Cutie automată:</strong> Se adaptează</li>
-                                                <li><strong>Durată:</strong> 1-8 ore</li>
-                                                <li><strong>Garanție:</strong> Nelimitată</li>
-                                                <li><strong>Original:</strong> Salvat înainte</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                    {/* FAQ Section */}
+                    <SwiperSlide>
+                        <div className="card" style={{ minWidth: '260px', maxWidth: '300px' }}>
+                            <div className="card-body p-3">
+                                <h4 className="text-center mb-3">Întrebări Frecvente</h4>
+                                <h6 className="card-subtitle mb-2 text-center">Informații Generale</h6>
+                                <div className="card-text px-2">
+                                    <ul className="small ps-3">
+                                        <li><strong>DPF/FAP:</strong> Rămâne funcțional</li>
+                                        <li><strong>Cutie automată:</strong> Se adaptează</li>
+                                        <li><strong>Durată:</strong> 1-8 ore</li>
+                                        <li><strong>Garanție:</strong> Nelimitată</li>
+                                        <li><strong>Original:</strong> Salvat înainte</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
+
+                </Swiper>
 
                 {/* Images for Tuning */}
-                <div className="imgRows container mt-4">
+                {/* Swiper Carousel for Tuning Images */}
+                <div className="imgSwiper container mt-4">
                     <div className="row justify-content-center">
-                        <div className="col-12 col-md-10 text-center">
-                            <div className="row g-3">
-                                <div className="col-md-4">
-                                    <img src="/tuning/tune1.png" className="img-fluid" alt="Tuning 1" />
-                                </div>
-                                <div className="col-md-4">
-                                    <img src="/tuning/tune2.jpg" className="img-fluid" alt="Tuning 2" />
-                                </div>
-                                <div className="col-md-4">
-                                    <img src="/tuning/tune3.jpg" className="img-fluid" alt="Tuning 3" />
-                                </div>
-                            </div>
+                        <div className="col-12 col-md-10">
+                            <Swiper
+                                slidesPerView={1}
+                                spaceBetween={20}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                breakpoints={{
+                                    576: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                    },
+                                    992: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                    }
+                                }}
+                                modules={[Pagination]}
+                                className="tuning-swiper"
+                            >
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <img
+                                            src="/tuning/tune1.png"
+                                            className="img-fluid rounded"
+                                            alt="Tuning 1"
+                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <img
+                                            src="/tuning/tune2.jpg"
+                                            className="img-fluid rounded"
+                                            alt="Tuning 2"
+                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <img
+                                            src="/tuning/tune3.jpg"
+                                            className="img-fluid rounded"
+                                            alt="Tuning 3"
+                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <img
+                                            src="/tuning/tune4.jpg"
+                                            className="img-fluid rounded"
+                                            alt="Tuning 4"
+                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <img
+                                            src="/tuning/tune5.jpg"
+                                            className="img-fluid rounded"
+                                            alt="Tuning 5"
+                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <img
+                                            src="/tuning/tune6.png"
+                                            className="img-fluid rounded"
+                                            alt="Tuning 6"
+                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
                     </div>
                 </div>
 
-                <div className="imgRows container mt-4">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-md-10 text-center">
-                            <div className="row g-3">
-                                <div className="col-md-4">
-                                    <img src="/tuning/tune4.jpg" className="img-fluid" alt="Tuning 4" />
-                                </div>
-                                <div className="col-md-4">
-                                    <img src="/tuning/tune5.jpg" className="img-fluid" alt="Tuning 5" />
-                                </div>
-                                <div className="col-md-4">
-                                    <img src="/tuning/tune6.png" className="img-fluid" alt="Tuning 6" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     );

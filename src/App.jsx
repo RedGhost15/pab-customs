@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/nav/Navbar';
 import Hero from './components/hero/Hero';
-import Detailing from './components/detailing/Detailing';
 import Banner from './components/banner/banner';
 import Tuning from './components/tuning/Tuning';
 import Despre from './components/despre/Despre';
@@ -12,6 +11,8 @@ import SteeringWheels from './components/list/SteeringWheels';
 import Partners from './components/parteneri/Partners';
 import ContactUs from './components/contactUs/ContactUs';
 import Reviews from './components/reviews/Reviews';
+import Exterior from './components/detailing/Exterior';
+import Interior from './components/detailing/Interior';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +38,8 @@ function App() {
       <Navbar />
       <Hero id="home" />
       <Banner />
-      <Detailing id="detailing" />
+      <Interior id="detailing" />
+      <Exterior />
       <Banner />
       <Tuning id="tuning" />
       <Partners />
