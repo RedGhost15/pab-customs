@@ -5,11 +5,10 @@
     align-items: center;
     justify-content: flex-start;
     background-image: url("/img/bg2.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 200px;
-
 }
 
 .textContainer {
