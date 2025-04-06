@@ -1,15 +1,5 @@
 /* SteeringWheels.css */
-:root {
-    --color1: rgba(20, 20, 20, 0.9);
-    --color3: #ddd;
-    --color4: #23538A;
-    --color6: white;
-    --color10: #00f3ff;
-    --hover: #A7CFDF;
-    --grad: linear-gradient(90deg, #A7CFDF 0%, #23538A 100%);
-    --neon-color: rgba(0, 243, 255, 0.8);
-    --text-color: #f5f5f5;
-}
+
 
 .steering-wheels-section {
     background-color: rgba(2, 2, 2, 0);
@@ -37,25 +27,45 @@
 .brand-buttons {
     display: flex;
     justify-content: center;
-    gap: clamp(0.8rem, 2vw, 1.5rem);
+    gap: clamp(0.5rem, 1vw, 1rem);
+    /* Reduced gap */
     flex-wrap: wrap;
-    padding: 0 clamp(1rem, 3vw, 2rem);
+    padding: 0 0.5rem;
+    /* Reduced padding */
 }
 
 .brand-button {
     position: relative;
-    padding: clamp(0.8rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2rem);
-    border: 2px solid var(--color4);
+    padding: 1rem;
+    /* Reduced padding */
+    border: 2px solid var(--hover);
     border-radius: 50px;
     background: rgba(20, 20, 20, 0.9);
     color: var(--color6);
     font-weight: 600;
-    font-size: clamp(0.8rem, 1.1vw, 1rem);
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    /* Slightly smaller font */
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
     z-index: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: auto;
+    /* Ensure buttons don't stretch */
+    width: auto;
+    /* Let content determine width */
+}
+
+.brand-logo {
+    width: clamp(30px, 5vw, 60px);
+    /* Smaller logo size */
+    height: auto;
+    object-fit: contain;
+    margin-right: 0.3rem;
+    /* Small space between logo and text */
 }
 
 .brand-button .neon-glow {
@@ -123,7 +133,6 @@
 .brand-description {
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     color: var(--color3);
-    margin-bottom: clamp(2rem, 6vw, 5rem);
     min-height: 55px;
     line-height: 1.6;
 }
@@ -174,16 +183,20 @@
 }
 
 .wheel-image {
-    width: clamp(120px, 25vw, 200px);
-    height: clamp(120px, 25vw, 200px);
+    width: clamp(180px, 40vw, 300px);
+    /* Adjust the max value here to make the image larger */
+    height: clamp(180px, 40vw, 300px);
+    /* Adjust the max value here to make the image larger */
     object-fit: contain;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .center-slide .wheel-image {
-    width: clamp(150px, 30vw, 250px);
-    height: clamp(150px, 30vw, 250px);
+    width: clamp(200px, 50vw, 350px);
+    /* Adjust the max value here to make the image larger */
+    height: clamp(200px, 50vw, 350px);
+    /* Adjust the max value here to make the image larger */
     border: 2px solid var(--color6);
 }
 

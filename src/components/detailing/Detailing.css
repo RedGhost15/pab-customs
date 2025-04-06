@@ -151,6 +151,7 @@
     width: 100%;
     height: auto;
     padding: 1rem 0 2rem;
+    overflow-x: hidden;
 }
 
 .service-swiper-cards .swiper-slide {
@@ -160,6 +161,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .service-swiper-cards .card {
@@ -275,11 +277,17 @@
     /* Adjust image height for mobile */
     .img-swiper .swiper-slide img {
         max-height: 250px;
+        width: 100%;
+        /* Ensure the images fill the slide */
+        object-fit: cover;
     }
 
     /* Card spacing */
     .card {
         margin-bottom: 1.5rem;
+        max-width: 100%;
+        /* Ensure card fits within mobile view */
+        box-sizing: border-box;
     }
 }
 

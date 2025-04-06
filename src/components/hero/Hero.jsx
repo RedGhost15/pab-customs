@@ -6,7 +6,7 @@ import AnimatedContent from "../../misc/animatedContent/AnimatedContent";
 
 const Hero = () => {
     return (
-        <div className="heroContainer container-fluid position-relative vh-100 vw-100 d-flex align-items-top flex-column hero-section">
+        <div className="heroContainer container-fluid g-0 position-relative vh-100 vw-100 d-flex align-items-top flex-column hero-section">
             <AnimatedContent
                 distance={150}
                 direction="horizontal"

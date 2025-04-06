@@ -450,8 +450,8 @@ const Exterior = () => {
                                             overflow: 'visible'
                                         }}>
                                             <div className="card h-100" style={{
-                                                width: '100%',
-                                                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                                                minWidth: '260px',
+                                                maxWidth: '300px'
                                             }}>
                                                 <div className="card-body p-3">
                                                     <h5 className="card-title text-center">{service.title}</h5>

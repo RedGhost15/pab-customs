@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-creative';
 import './SteeringWheels.css';
 
 const brandLogos = {
@@ -61,45 +64,17 @@ const steeringWheelData = {
 
 const SteeringWheels = () => {
     const [selectedBrand, setSelectedBrand] = useState('BMW');
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextSlide = () => {
-        setCurrentIndex(prev =>
-            (prev + 1) % steeringWheelData[selectedBrand].images.length
-        );
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex(prev =>
-            prev === 0 ? steeringWheelData[selectedBrand].images.length - 1 : prev - 1
-        );
-    };
-
-    const getVisibleImages = () => {
-        const images = steeringWheelData[selectedBrand].images;
-        const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-        const nextIndex = (currentIndex + 1) % images.length;
-
-        return [
-            images[prevIndex],
-            images[currentIndex],
-            images[nextIndex]
-        ];
-    };
 
     return (
-        <section id='volane' className="steering-wheels-section">
+        <section id="volane" className="steering-wheels-section">
             <div className="brand-selector">
                 <h2 className="section-title">Volane Premium</h2>
                 <div className="brand-buttons">
-                    {Object.keys(steeringWheelData).map(brand => (
+                    {Object.keys(steeringWheelData).map((brand) => (
                         <button
                             key={brand}
                             className={`brand-button ${selectedBrand === brand ? 'active' : ''}`}
-                            onClick={() => {
-                                setSelectedBrand(brand);
-                                setCurrentIndex(0);
-                            }}
+                            onClick={() => setSelectedBrand(brand)}
                             aria-label={brand}
                         >
                             <img
@@ -107,6 +82,7 @@ const SteeringWheels = () => {
                                 alt={brand}
                                 className="brand-logo"
                             />
+                            {brand} {/* Add the brand name text */}
                             <span className="neon-glow"></span>
                         </button>
                     ))}
@@ -118,31 +94,34 @@ const SteeringWheels = () => {
                 <h5 className="brand-comp">{steeringWheelData[selectedBrand].modele}</h5>
                 <p className="brand-description">{steeringWheelData[selectedBrand].description}</p>
 
-                <div className="carousel">
-                    <button className="nav-button prev" onClick={prevSlide}>
-                        <ChevronLeft />
-                    </button>
-
-                    <div className="carousel-track">
-                        {getVisibleImages().map((img, index) => (
-                            <div
-                                key={`${img.src}-${index}`}
-                                className={`carousel-slide ${index === 1 ? 'center-slide' : 'side-slide'}`}
-                            >
-                                <img
-                                    src={img.src}
-                                    alt={`${selectedBrand} steering wheel`}
-                                    className="wheel-image"
-                                />
-                                <div className="style-number">{img.styleNumber}</div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <button className="nav-button next" onClick={nextSlide}>
-                        <ChevronRight />
-                    </button>
-                </div>
+                <Swiper
+                    grabCursor={true}
+                    effect="creative"
+                    creativeEffect={{
+                        prev: {
+                            shadow: true,
+                            translate: [0, 0, -400],
+                        },
+                        next: {
+                            translate: ['100%', 0, 0],
+                        },
+                    }}
+                    className="mySwiper"
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop
+                >
+                    {steeringWheelData[selectedBrand].images.map((img, index) => (
+                        <SwiperSlide key={index} className="carousel-slide">
+                            <img
+                                src={img.src}
+                                alt={`${selectedBrand} steering wheel`}
+                                className="wheel-image"
+                            />
+                            <div className="style-number">{img.styleNumber}</div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
 
             <div className="customization-info">
@@ -151,48 +130,36 @@ const SteeringWheels = () => {
                 <div className="info-grid">
                     <div className="info-card">
                         <h4>Materiale Exclusive</h4>
-                        <p>Volanele noastre sunt realizate din piele italiană premium, alcantara sport sau combinații personalizate, oferind aderență perfectă și senzație premium.</p>
+                        <p>Volanele noastre sunt realizate din piele italiană premium...</p>
                         <span className="neon-glow"></span>
                     </div>
 
                     <div className="info-card">
                         <h4>Design Sport</h4>
-                        <p>Profil grosier, zone perforate și contururi ergonomice pentru control precis în viraje rapide și condus dinamic.</p>
+                        <p>Profil grosier, zone perforate și contururi ergonomice...</p>
                         <span className="neon-glow"></span>
                     </div>
 
                     <div className="info-card">
                         <h4>Funcționalități Avansate</h4>
-                        <p>Opțional: pedale schimbator, comenzi multimedia, display digital, iluminare LED și multe altele.</p>
+                        <p>Opțional: pedale schimbator, comenzi multimedia...</p>
                         <span className="neon-glow"></span>
                     </div>
 
                     <div className="info-card">
                         <h4>Adaptare Perfectă</h4>
-                        <p>Fiecare volan este ajustat nu doar la modelul mașinii, ci și la stilul tău de condus, asigurând confort și control.</p>
+                        <p>Fiecare volan este ajustat nu doar la modelul mașinii...</p>
                         <span className="neon-glow"></span>
                     </div>
                 </div>
 
                 <div className="full-width-info">
-                    <p>Transformă-ți mașina într-o adevărată extensie a personalității tale cu un volan customizat. Toate produsele noastre sunt testate în condiții extreme și vin cu garanție extinsă. Contactează-ne pentru o consultanță personalizată și pentru a afla cum poți îmbunătăți experiența ta de condus.</p>
+                    <p>Transformă-ți mașina într-o adevărată extensie a personalității tale...</p>
                     <a href="tel:+1234567890" className="heroCall">Contactați-ne!</a>
                 </div>
             </div>
         </section>
     );
 };
-
-const ChevronLeft = () => (
-    <svg viewBox="0 0 24 24" width="32" height="32">
-        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="white" />
-    </svg>
-);
-
-const ChevronRight = () => (
-    <svg viewBox="0 0 24 24" width="32" height="32">
-        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="white" />
-    </svg>
-);
 
 export default SteeringWheels;
