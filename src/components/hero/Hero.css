@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-start;
     background-image: url("/img/bg2.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 200px;
