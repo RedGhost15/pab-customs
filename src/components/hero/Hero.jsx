@@ -20,8 +20,7 @@ const Hero = () => {
                 <div className="textContainer">
                     <h1 className="titleText">Professional Car Detailing & Tuning</h1>
                     <p className="subtitleText">
-                        Experimentează prestigiul unei mașini detaliate profesional,
-                        radiind eleganță și rafinament la fiecare pas.
+                        Experimentează prestigiul unei mașini detaliate profesional
                     </p>
                     <a href="tel:+1234567890" className="heroCall">Contactați-ne!</a>
                 </div>

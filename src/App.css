@@ -23,9 +23,8 @@
 
 body {
     display: flex;
-    background:
-        url(/img/leather.png) center/cover no-repeat fixed,
-        linear-gradient(rgba(2, 2, 2, 0.7), rgba(2, 2, 2, 0.7));
+    background: rgb(0, 0, 51);
+    background: radial-gradient(circle, rgba(0, 0, 51, 1) 6%, rgba(0, 0, 0, 1) 95%);
     overflow-x: hidden;
     flex-direction: column;
     min-height: 100vh;

@@ -368,10 +368,10 @@ const Interior = () => {
                 </div>
 
                 {/* Swiper Carousel with Service Cards - Cards Effect Version */}
-                <div className="swiper container mt-5 mb-5">
+                <div className="servicesCont swiper container mt-5 mb-5">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-10 col-xl-8">
-                            <h4 className="text-center mb-4">Servicii Extra Interior</h4>
+                            <h4 className="extraTitle text-center mb-4">Servicii Extra Interior</h4>
                             <div className="swiper-service-container" style={{
                                 maxWidth: '400px',
                                 margin: '0 auto',
@@ -425,7 +425,7 @@ const Interior = () => {
                 {/* Swiper Carousel for Interior Images */}
                 <div className="imgSwiper container mt-4">
                     <div className="row justify-content-center">
-                        <div className="col-12 col-md-10">
+                        <div className="col-12 col-md-12">
                             <Swiper
                                 slidesPerView={1}
                                 spaceBetween={20}
@@ -453,9 +453,9 @@ const Interior = () => {
                                     <div className="d-flex justify-content-center">
                                         <img
                                             src="/detailing-img/int1.jpg"
-                                            className="img-fluid rounded"
+                                            className="swiperImg img-fluid rounded"
                                             alt="Interior 1"
-                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                            style={{ maxHeight: '450px', objectFit: 'cover' }}
                                         />
                                     </div>
                                 </SwiperSlide>
@@ -463,9 +463,9 @@ const Interior = () => {
                                     <div className="d-flex justify-content-center">
                                         <img
                                             src="/detailing-img/int2.jpg"
-                                            className="img-fluid rounded"
+                                            className="swiperImg img-fluid rounded"
                                             alt="Interior 2"
-                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                            style={{ maxHeight: '450px', objectFit: 'cover' }}
                                         />
                                     </div>
                                 </SwiperSlide>
@@ -473,9 +473,9 @@ const Interior = () => {
                                     <div className="d-flex justify-content-center">
                                         <img
                                             src="/detailing-img/int3.png"
-                                            className="img-fluid rounded"
+                                            className="swiperImg img-fluid rounded"
                                             alt="Interior 3"
-                                            style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                            style={{ maxHeight: '450px', objectFit: 'cover' }}
                                         />
                                     </div>
                                 </SwiperSlide>

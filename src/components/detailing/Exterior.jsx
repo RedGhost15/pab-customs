@@ -421,10 +421,10 @@ const Exterior = () => {
                 </div>
 
                 {/* Swiper Carousel for Exterior Services with Cards Effect */}
-                <div className="swiper container mt-5 mb-5">
+                <div className="servicesCont swiper container mt-5 mb-5">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-10 col-xl-8">
-                            <h4 className="text-center mb-4">Servicii Extra Exterior</h4>
+                            <h4 className="extraTitle text-center mb-4">Servicii Extra Exterior</h4>
                             <div className="swiper-service-container" style={{
                                 maxWidth: '400px',
                                 margin: '0 auto',
